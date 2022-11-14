@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 
 module.exports = (env, argv) => {
@@ -44,8 +46,7 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-                    use: ['file-loader?name=[name].[ext]&publicPath=/&outputPath=images/',
-                    'image-webpack-loader']}
+                    loader: 'url-loader?limit=100000' }
             ]
         },
         resolve: {
@@ -62,6 +63,11 @@ module.exports = (env, argv) => {
             }),
             new MiniCssExtractPlugin({
                 filename: "bundle.css"
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    { from: 'public' }
+                ]
             })
         ]
     };
