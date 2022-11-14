@@ -8,7 +8,7 @@ function ProductCard(props) {
     return (
       <div className="entire-panel" >
           <Link to={props.productPath} >
-            <img src={props.imagePath} className="buttonIMG" />
+            <img src={require(props.imagePath)} className="buttonIMG" />
           </Link>
           <div className="product-info">
             <Link to={props.productPath} className="product-name" ><h5 >{props.name}</h5></Link>
