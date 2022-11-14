@@ -1,0 +1,11 @@
+
+.explore-title{
+    padding: 36px 0px 24px 12px;
+}
+
+.explore-cards-frame{
+    padding: 0px 8% 48px 8%;
+    display: flex;
+    justify-content: center;
+}
+

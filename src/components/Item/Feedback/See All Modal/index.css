@@ -1,0 +1,16 @@
+
+.see-all-modal{
+    max-width: 96%;
+}
+
+.see-all-reviews-button{
+    text-decoration: underline;
+    font-size: 16px;
+    padding: 0px 12px;
+    cursor: pointer;
+}
+
+.see-all-reviews-button:hover{
+    color: rgb(0, 170, 255);
+    text-decoration: underline;
+}

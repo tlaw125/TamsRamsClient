@@ -1,0 +1,10 @@
+
+.select-options{
+  font-weight: bold;
+  padding: 8px 28px 8px 16px;
+}
+
+.ShowSortByContainer {
+  display: flex;
+  justify-content: flex-end;
+}

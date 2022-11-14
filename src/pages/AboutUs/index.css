@@ -1,0 +1,103 @@
+.about-us-frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us-bg {
+    background: linear-gradient(to top, rgba(40, 40, 40, 0.75), rgba(0, 0, 0, 0.9)),
+    url("../../../public/images/planted_50gal.jpg"); 
+    background-size: cover;
+    background-position: calc(10%) calc(20%);
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about-us-header{
+    text-align: center;
+    padding: 24px 0px 16px 0px;
+}
+
+.about-us-bg-text{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0px 0px 16px 0px;
+    width: 300px;
+}
+
+.about-us-bg-text2{
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    padding: 0px 0px 24px 0px;
+    width: 300px;
+}
+
+.about-us-social-media-text{
+    padding: 8px 0px;
+    text-align: center;
+}
+
+.about-us-ig-yt{
+    color:black;
+    padding: 8px 8px 12px 8px;
+    transition: 200ms;
+    display: flex;
+    align-items: center;
+}
+
+.about-us-ig-yt:hover{
+    color: #218BC6;
+}
+
+.about-us-ig-yt-text{
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+.watermark-text{
+    padding: 0px 0px 0px 4px;
+}
+
+.about-us-contents{
+    padding: 12px 4%;
+    max-width: 980px;
+}
+
+
+.about-us-sub-header{
+    padding: 8px 0px 8px 0px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.about-us-our-story-text{
+    padding: 8px 0px;
+    color: black;
+}
+
+@media screen and (min-width: 480px) {
+    .about-us-social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .about-us-social-media{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

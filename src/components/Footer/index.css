@@ -1,0 +1,11 @@
+.footer {    
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 24px 20%;
+}
+
+.instagram{
+    color: white;
+}

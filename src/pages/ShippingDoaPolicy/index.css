@@ -1,0 +1,44 @@
+.shipping-doa-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shipping-doa-contents{
+    padding: 16px;
+    max-width: 980px;
+}
+
+.shipping-doa-header{
+    text-align: center;
+    padding: 16px 0px;
+}
+
+.header-with-icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.shipping-doa-sub-header{
+    padding: 8px 0px 0px 20px;
+}
+
+.shipping-doa-sub-sub-header{
+    padding: 8px 8px 8px 0px;
+    text-decoration: underline;
+}
+
+.shipping-doa-lower-48{
+    padding: 20px 0px 0px 20px;
+    color: rgb(50, 50, 50);
+}
+
+.shipping-doa-info{
+    padding: 8px 0px;
+    color: rgb(50, 50, 50);
+}
+
+.shipping-doa-bold{
+    color: black
+}

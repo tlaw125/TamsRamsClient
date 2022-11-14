@@ -1,0 +1,18 @@
+.state-select, .default-state-select{
+    min-width: 180px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid rgb(225, 225, 225);
+    transition: 200ms;
+}
+
+.default-state-select{
+    color: rgb(140, 140, 140);
+}
+
+
+.state-select:focus, .state-select:active, .state-select:hover{
+    border: 1px solid rgb(2, 115, 190);
+}
+
+

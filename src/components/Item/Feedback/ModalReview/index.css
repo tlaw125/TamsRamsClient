@@ -1,0 +1,27 @@
+
+.modal-review-container {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+.modal-review{
+    width: 100%;
+}
+
+.modal-rating-and-reviewer {
+   padding: 12px 0px 12px 0px;
+}
+
+.modal-reviewer {
+    float: left;
+}
+
+.modal-review-date {
+    color: gray;
+    float: right;
+}
+
+

@@ -1,0 +1,89 @@
+
+.top-navbar {
+    padding: 4px 0px;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky;
+    background:rgba(0, 0, 0, 1);
+}
+
+.mobile-logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+}
+
+.mobile-logo-img{
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+}
+
+.menu-button{
+    padding-left: 8px;
+}
+    
+.cart-button {
+    padding-right: 2%;
+}
+    
+
+.mobile-tams-rams {
+    color: white;
+}
+
+.mobile-logo-container:hover {
+    color: #218BC6;
+}
+
+.nav-button {
+    color: white !important;
+}
+
+.nav-button:hover, .nav-button:focus  {
+    color: black !important;
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    width: 250px;
+    height: 100%;
+    z-index: 998;
+    top: 64px;
+    overflow: auto;
+}
+
+.rs-badge-content{
+    background: #218BC6 !important;
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .mobile-shopping-cart-popover{
+        width: 400px;
+   }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .mobile-shopping-cart-popover{
+        width: 100%;
+   }
+
+   .mobile-logo-img{
+    width: 56px;
+    height: 56px;
+    padding: 4px;
+}
+
+   .mobile-tams-rams {
+    font-size: 32px;
+}
+}
+   

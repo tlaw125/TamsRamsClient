@@ -1,0 +1,125 @@
+.background {
+    background: url("../../../../public/images/homepageImage2.jpg") no-repeat; 
+    background-size: cover;
+    background-position: calc(0%) calc(65%);
+    position: relative;
+    color: white;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.browse-all-fish-shop-live-frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.browse-fish-text{
+    font-size: 16px;
+    color: rgb(198, 198, 198);
+    padding: 0px 0px 16px 0px;
+}
+
+.watermark{
+    color:white;
+    position: absolute;
+    padding: 0px 12px 4px 0px;
+    bottom: 0;
+    right: 0;
+    opacity: 60%;
+    transition: 200ms;
+    display: flex;
+    align-items: center;
+}
+
+.watermark:hover{
+    opacity: 100%;
+}
+
+.watermark-text{
+    padding: 0px 0px 0px 4px;
+}
+
+.watermark-text:link, .watermark-text:hover, .watermark-text:visited, .watermark-text:active{
+    text-decoration: none;
+}
+
+.browse-button-contents{
+    display: flex;
+    align-items: center;
+}
+
+.shop-live-fish-button{
+    width: 148px;
+    color: white !important;
+}
+
+.shop-live-fish-button:hover{
+    background-color: #2ea3e2 !important;
+}
+
+.shop-live-fish-button-text{
+    color: white;
+}
+
+.arrow-icon{
+    padding: 0px 0px 0px 8px;
+    color: white;
+}
+
+@media screen and (min-width: 992px) {
+    .shop-live-fish-frame {
+        padding: 100px 0%;
+    }
+    .contents {
+        padding-left: 8%;
+        height: 136px;
+    }
+    .hobbyist-bred-text {
+        font-size: 36px;
+    }
+
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 992px) {
+    .shop-live-fish-frame {
+        padding: 80px 5%;
+    }
+    .contents {
+        padding-left: 5%;
+        height: 136px;
+    }
+    .hobbyist-bred-text {
+        font-size: 32px;
+    }
+
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    .shop-live-fish-frame {
+        padding: 50px 0%;
+    }
+    .contents {
+        align-items: center;
+        text-align: center;
+        height: 134px;
+    }
+    .hobbyist-bred-text {
+        font-size: 24px;
+    }
+    .browse-all-fish-shop-live-frame{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .browse-fish-text{
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+    }
+  }

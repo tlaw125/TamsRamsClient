@@ -1,0 +1,10 @@
+.title{
+    padding: 36px 0px 24px 12px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .blackram{
+        margin: 0% 15%;
+        max-width: 70%;
+    }
+  }

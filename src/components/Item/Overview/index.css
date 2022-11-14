@@ -1,0 +1,17 @@
+hr {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.overview {
+    width: 100%;
+    min-width: 260px;
+}
+
+.overview-details {
+    padding-top: 12px;
+}
+
+.water-parameters-details {
+    padding-top: 12px;
+}

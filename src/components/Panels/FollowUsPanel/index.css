@@ -1,0 +1,96 @@
+.follow-us-frame {
+    background-color: black;
+
+}
+
+.follow-us-buttonIMG{
+    height: auto;
+    width: 100%;
+    padding: 8px;
+    border-radius: 10%;
+    transition: 300ms;
+}
+
+.follow-us-buttonIMG:hover{
+    opacity: 0.75;
+}
+
+.follow-us-header{
+    text-align: center;
+    color: white;
+    padding: 36px 8%;
+    font-size: 32px;
+}
+
+.follow{
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.follow-link{
+    color:white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms;
+    max-width: 308px;
+    
+}
+
+.follow-link:hover{
+    color: #218BC6;
+}
+
+.follow-text{
+    padding: 0px 4px 0px 0px;
+}
+
+.follow-link:link, .follow-link:hover, .follow-link:visited, .follow-link:active{
+    text-decoration: none;
+}
+
+.youtube-section{
+    padding: 54px 0px 36px 0px;
+}
+
+.youtube-videos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.yt-video{
+    padding: 8px 8px 0px 8px;
+}
+
+@media screen and (min-width: 992px) {
+    
+    .yt-video{
+        margin: 8px 8px 0px 8px;
+        width: 600px;
+        height: 338px;
+    }
+  }
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .bigger-pic{
+        margin: 0% 15%;
+        max-width: 70%;
+    }
+
+    .yt-video{
+        margin: 8px 8px 0px 8px;
+        width: 426px;
+        height: 240px;
+    }
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    .yt-video{
+        margin: 8px 8px 0px 8px;
+        width: 320px;
+        height: 180px;
+    }
+  }

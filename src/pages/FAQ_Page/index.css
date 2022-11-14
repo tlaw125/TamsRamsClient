@@ -1,0 +1,29 @@
+.faq-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-contents{
+    padding: 16px;
+    max-width: 980px;
+}
+
+.faq-header{
+    text-align: center;
+    padding: 16px 0px;
+}
+
+.faq-shipping-doa-info{
+    padding: 0px 0px 16px 0px;
+}
+
+.faq-sub-header{
+    padding: 8px 0px 8px 0px;
+    font-size: 20px;
+}
+
+.faq-info{
+    padding: 8px 0px;
+    color: black;
+}

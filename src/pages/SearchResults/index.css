@@ -1,0 +1,19 @@
+.SearchResultsPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 8px;
+};
+
+.search-row{
+    width: 100%;
+}
+
+.search-header{
+    padding: 12px 12px 0px 16px;
+}
+
+.no-products-header{
+    padding: 24px 12px;
+    text-align: center;
+}

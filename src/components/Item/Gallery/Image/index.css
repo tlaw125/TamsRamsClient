@@ -1,0 +1,8 @@
+.image {
+    border-radius: 8px;
+    transition: 150ms;
+}
+
+.image:hover{
+    opacity: 95%;
+}

@@ -1,0 +1,37 @@
+.entire-panel{
+    position: relative;
+}
+
+.buttonIMG{
+    height: auto;
+    width: 100%;
+    padding: 8px;
+    border-radius: 10%;
+    transition: 200ms;
+}
+
+.buttonIMG:hover{
+    opacity: 0.9;
+}
+
+.product-info{
+  margin: 0px 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  height: 64px;
+}
+
+.product-name{
+  color: black;
+  padding: 0px 4px 0px 4px;
+  transition: 200ms;
+}
+
+.product-price{
+  padding: 0px 4px 0px 4px;
+}
+
+
+
+

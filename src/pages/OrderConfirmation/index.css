@@ -1,0 +1,84 @@
+.order-confirmation-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-confirmation-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px 28px 36px;
+    max-width: 880px;
+    border-style: solid;
+    border-width: 0.2px;
+    border-color: rgb(236, 236, 236);
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgb(193, 193, 193);
+    margin: 24px;
+}
+
+.order-confirmation-header {
+    text-align: center;
+    padding: 0px 0px 8px 0px;
+}
+
+.order-confirmation-check-icon {
+    text-align: center;
+    padding: 28px 0px 28px 0px;
+    color: #218BC6;
+}
+
+.order-confirmation-cont-shop-button {
+    margin: 36px 0px;
+}
+
+.order-confirmation-cont-shop-button:hover {
+    background-color: #2ea3e2 !important;
+}
+
+.order-confirmation-text-with-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.order-confirmation-cont-shop-text {
+    padding-right: 8px;
+    color: white;
+}
+
+.order-confirmation-cont-shop-icon {
+    color: white;
+}
+
+
+.order-confirmation-text {
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 0px 0px 0px;
+}
+
+@media screen and (min-width: 480px) {
+
+    
+    .order-confirmation-check-icon {
+        font-size: 72px;
+    }
+    
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+
+    .order-confirmation-header {
+        font-size: 24px;
+    }
+    
+    .order-confirmation-check-icon {
+        font-size: 48px;
+    }
+
+}

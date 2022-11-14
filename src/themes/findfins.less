@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import '~rsuite/lib/styles/themes/default/index.less'; //The default style file.
+@import '~rsuite/lib/styles/constants.less';
+
+
+// Palette
+@base-color: #218BC6;
+@H050: color(~`palette('@{base-color}', 50)`);
+@H100: color(~`palette('@{base-color}', 100)`);
+@H200: color(~`palette('@{base-color}', 200)`);
+@H300: color(~`palette('@{base-color}', 300)`);
+@H400: color(~`palette('@{base-color}', 400)`);
+@H500: @base-color;
+@H600: color(~`palette('@{base-color}', 600)`);
+@H700: color(~`palette('@{base-color}', 700)`); // this is what links use
+@H800: color(~`palette('@{base-color}', 800)`);
+@H900: color(~`palette('@{base-color}', 900)`);
+
+
+//** Background color for `<body>`.
+@body-bg: white;
+//** Global text color on `<body>`.
+@text-color: black;
+
+
+// Font
+@font-family-base: 'Roboto', 'Kanit', Verdana, Helvetica, Arial, sans-serif;
+
+
+// Headings
+//** By default, this inherits from the `<body>`.
+@headings-font-family: 'Kanit';
+@headings-font-weight: bolder;
+@headings-color: black;
+
+
+@border-radius-base: 4px;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@btn-font-weight: normal;
+// Default Button color set;
+@btn-default-color: @text-color;
+@btn-default-bg: @B050;
+@btn-default-bg-dark: @B200;
+@btn-default-hover-color: @text-color;
+@btn-default-hover-bg: @B200;
+@btn-default-hover-bg-dark: @B300;
+@btn-default-active-bg: rgb(201, 201, 201);
+@btn-default-active-bg-dark: @B400;
+@btn-default-focus-bg: rgb(201, 201, 201);
+@btn-default-focus-bg-dark: @B300;
+@btn-default-disabled-bg: @btn-default-bg;
+// Button has icon color set
+@btn-icon-with-text-bg: @B100;
+@btn-icon-with-text-hover-bg: @B300;
+@btn-icon-with-text-focus-bg: @B300;
+@btn-icon-with-text-active-bg: @B400;
+// Primary Button color set;
+@btn-primary-color: #fff;
+@btn-primary-bg: @base-color;
+// Default Button color set;
+@btn-link-color: @link-color;
+// Subtle Button color set;
+@btn-subtle-primary-color: @primary-color;
+@btn-subtle-color: @B600;
+@btn-subtle-hover-color: @B000;
+@btn-subtle-default-hover-color: @B800;
+@btn-subtle-hover-bg: @B050;
+@btn-subtle-focus-bg: @btn-subtle-hover-bg;
+@btn-subtle-active-color: @B000;
+@btn-subtle-active-default-color: @B900;
+@btn-subtle-active-default-bg: @B200;
+@btn-subtle-disabled-color: @B400;
+// Ghost Button color set;
+@btn-ghost-color: @primary-color;
+@btn-ghost-border-color: @primary-color;
+@btn-ghost-border-width: 1px;
+
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-large: @border-radius-base;
+@btn-border-radius-small: @border-radius-base;
+
+// Button Loading
+@btn-loading-spin-default-diameter: 18px;
+@btn-loading-spin-xs-diameter: 16px;
+@btn-loading-spin-ring-wide: 3px;
+@btn-loading-spin-ring-color: @B050;
+@btn-spin-light-color: @B000;
+@btn-spin-light-invert-color: @B500;
+//== Btn Group
+@btn-group-disabled-active-color: @B500;
+//== other
+@ripple-transition: background-color .3s linear, border-bottom-color .3s linear;
+
+
+// Input
+@input-bg: white;
+//** Text color for `<input>`s
+@input-color: black;
+//** Text disabled color
+@input-color-disabled: @B400;
+//** `<input>` border color
+@input-border: @B200;
+@input-border-radius: @border-radius-base;
+@input-group-addon-bg: white;
+
+
+// Dropdown
+@dropdown-link-color: black;
+@dropdown-link-hover-color: @base-color;
+@dropdown-bg: white;
+
+// Sidenav default
+@sidenav-inverse-bg: black;
+@sidenav-inverse-font-color: white;
+@sidenav-deafult-hover-font-color: @nav-item-hover-font-color;
+@sidenav-deafult-click-font-color: @nav-item-click-font-color;
+@sidenav-deafult-active-font-color: @nav-item-active-font-color;
+@sidenav-deafult-hover-bg: @nav-item-default-hover-bg;
+@sidenav-deafult-click-bg: @nav-item-click-bg;
+
+
+//** Global textual link color.
+@link-color: @base-color;
+//** Link hover color.
+@link-hover-color: @base-color;
+//** Link Active color
+@link-active-color: black;
+//** border base color.
+@border-base-color: black;
+//** base bg color.
+@base-bg-color: black;
+//** border primary color.
+@border-primary-color: black;
+//** loading text color
+@loading-text-color: black;
+
+
+// Settings for some of the most global styles.
+@link-hover-decoration:  none;
+@link-active-decoration: none;
+
+@sidenav-default-bg: black;
+@sidenav-default-font-color: @nav-item-font-default-color;
+
+
+// Pagination
+// @pagination-hover-color: orange;
+// @pagination-active-color: @H500;
+// @pagination-hover-bg: pink;
+// @pagination-active-bg: green;
+// @pagination-transition: @ripple-transition, color .3s linear;
+
+
+//** By default, this inherits from the `<body>`.
+// @headings-font-family: inherit;
+// @headings-font-weight: 500;
+// @headings-line-height: 1.1;
+@headings-color: inherit;

@@ -1,0 +1,22 @@
+.BrowsePage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 8px;
+};
+
+.browse-row{
+    width: 100%;
+}
+
+.browse-header{
+    padding: 0px 12px 0px 12px;
+}
+
+.no-products-header{
+    padding: 24px 12px;
+    text-align: center;
+}
+
+
+

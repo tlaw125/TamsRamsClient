@@ -1,0 +1,58 @@
+
+.review-container {
+    border-style: solid;
+    border-width: 0.2px;
+    border-color: rgb(236, 236, 236);
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgb(193, 193, 193);
+    padding: 16px 16px 8px 16px;
+    margin: 8px 8px 20px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reviewer {
+    float: left;
+}
+
+.review-date {
+    color: gray;
+    float: right;
+}
+
+
+@media screen and (min-width: 995px) {
+
+    .review-container {
+        height: 320px;
+        width: 240px;
+    }
+
+  }
+
+  @media screen and (min-width: 708px) and (max-width: 995px) {
+
+    .review-container {
+        width: 90%;
+        min-height: 136px;
+    }
+
+
+    .rating-and-reviewer {
+        padding: 12px 0px 0px 0px;
+    }
+
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 708px) {
+
+    .review-container {
+        width: 98%;
+        min-height: 175px;
+    }
+
+    .rating-and-reviewer {
+        padding: 12px 0px 0px 0px;
+    }
+  }

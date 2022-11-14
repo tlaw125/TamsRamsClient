@@ -1,0 +1,59 @@
+.gallery {
+    padding: 20px 0px;
+    max-height: 1200px;
+    position: relative;
+    overflow: auto;
+}
+
+.gallery-row {
+    padding: 8px;
+}
+
+.image-carousel{
+  position: relative;
+  width: 100%;
+}
+
+.img-in-carousel{
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 4px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(173, 173, 173); 
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(138, 138, 138); 
+  }
+
+  @media screen and (min-width: 708px){
+
+    .custom-slider{
+        height: 400px !important;
+    }
+
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 708px) {
+
+    .custom-slider{
+        max-height: 280px !important;
+    }
+
+  }

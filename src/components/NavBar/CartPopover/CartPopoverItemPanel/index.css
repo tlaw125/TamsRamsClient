@@ -1,0 +1,135 @@
+.cart-popover{
+    position: relative;
+}
+
+.popover-contents{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.popover-image-and-remove-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popover-cartbuttonIMG{
+    max-height: 160px;
+    width: 148px;
+    border-radius: 10%;
+    transition: 150ms;
+}
+
+.popover-cartbuttonIMG:hover{
+    opacity: 0.9;
+}
+
+.popover-item-section{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin: 8px 0px;
+}
+
+.popover-item-and-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* min-width: 120px;
+  max-width: 150px; */
+  width: 148px;
+  align-items: center;
+}
+
+
+.popover-remove-button{
+  background-color: black !important;
+  color: white !important;
+  transition: 150ms;
+  width: 100%;
+  margin: 4px 0px 0px 0px;
+}
+
+.popover-remove-button:hover, .popover-remove-button:focus{
+  background-color: rgb(55, 55, 55) !important;
+  color: white !important;
+}
+
+.popover-remove-button-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popover-remove-header{
+  font-size: 12px;
+  padding-left: 8px;
+}
+
+.popover-item-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4px 8px;
+}
+
+.popover-item-name{
+  color: black;
+  transition: 100ms;
+  padding: 0px 0px 4px 0px;
+}
+
+.popover-item-name:hover{
+    color: #218BC6;
+  }
+
+
+.popover-item-price, .popover-item-total{
+    font-size: 16px;
+}
+
+.popover-item-size, .popover-item-name, .popover-item-grouping{
+    font-size: 12px;
+}
+
+.popover-price-section, .popover-total-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.popover-price-section, .popover-total-section {
+  width: 15%;
+}
+
+.popover-quantity-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+  }
+
+  .popover-quantity-input{
+    margin-top: 8px;
+  }
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  

@@ -1,0 +1,121 @@
+
+.form{
+    width: 100%;
+}
+
+.form-product-name {
+    padding: 0px 8px 8px 8px;
+}
+
+.form-price-and-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px 8px 4px;
+}
+
+.form-rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-star {
+    float: left;
+}
+
+.form-sizing {
+    padding: 8px;
+}
+
+.form-grouping {
+    padding: 8px;
+    width: 100%;
+}
+
+.form-grouping-buttons {
+    padding: 8px 0px 8px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* .form-sizing-button{
+    margin: 0px 8px;
+    width: 40%;
+    min-width: 140px;
+} */
+
+.form-grouping-button{
+    padding: 0px 8px;
+    min-width: 108px;
+    max-width: 200px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.form-grouping-active-button{
+    padding: 0px 8px;
+    min-width: 108px;
+    max-width: 200px;
+    flex: 1;
+    flex-wrap: wrap;
+    background-color: rgb(215, 215, 215) !important;
+}
+/* 
+.form-sizing-button:active, .form-grouping-button:active{
+    color: rgb(85, 85, 85);
+} */
+
+.form-quantity-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-quantity-input{
+    width: 60px;
+    margin: 0px 8px;
+}
+
+.form-quantity-and-add {
+    padding: 8px;
+}
+
+.quantity-and-add-frame{
+    padding: 8px 8px 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-add-to-cart-button {
+    width: 50%;
+    min-height: 36px; 
+    max-width: 200px;
+}
+
+.sold-out-text{
+    font-style: italic;
+    color: gray;
+    text-align: center;
+}
+
+@media screen and (min-width: 995px) {
+    .form {
+        padding: 20px 0px;
+    }
+  }
+
+  @media screen and (min-width: 708px) and (max-width: 995px) {
+
+
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 708px) {
+
+    .form {
+        padding: 24px 0px 12px 0px;
+    }
+
+  }
