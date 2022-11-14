@@ -12,7 +12,7 @@ function ExploreOtherSpeciesPanel() {
         <div className="explore-cards-frame">
           <ExploreCard header="Angelfish" right="0" 
            path="/browse/fish/angelfish?sortby=product_name&orderby=asc"
-            imagePath="mages/browse-angelfish.jpg" />
+            imagePath="images/browse-angelfish.jpg" />
           <ExploreCard header="Livebearers" 
            path="/browse/fish/livebearers?sortby=product_name&orderby=asc"
           imagePath="images/browse-livebearers.jpg" />

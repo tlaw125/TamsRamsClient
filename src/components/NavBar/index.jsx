@@ -55,7 +55,7 @@ function NavBar() {
             <Nav className="logo">
               <a href="/" className="mobile-tams-rams"><div className="mobile-logo-container">
                 <h1>TAM'S</h1>
-                <img src={"tams-rams-logomark.svg"} className="mobile-logo-img"></img>
+                <img src={"./tams-rams-logomark.svg"} className="mobile-logo-img"></img>
                 <h1>RAMS</h1>
               </div></a>
             </Nav>
