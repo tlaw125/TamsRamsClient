@@ -42,7 +42,7 @@ function SearchResultsPage() {
         cards.push(searchList.map((val) => {
             return (
                 <Col key={val.id} xs={24} sm={12} md={8} lg={6}><ProductCard
-                    imagePath={`../../../public/images/${val.image_prefix}1.jpg`} name={val.product_name} price={val.price}
+                    imagePath={`images/${val.image_prefix}1.jpg`} name={val.product_name} price={val.price}
                     productPath={`/product/${val.id}/${val.product_name.replace(/\s/g, '-').toLowerCase()}`} />
                 </Col>)
         }));

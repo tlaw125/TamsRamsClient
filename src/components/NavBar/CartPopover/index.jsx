@@ -103,7 +103,7 @@ function CartPopover() {
         totalMaxBagVal += val.quantity_in_cart * val.max_bag_value;
         return (
           <Panel><CartPopoverItemPanel
-            key={val.id} variation_id={val.id} imagePath={`../../../public/images/${val.image_prefix}1.jpg`} name={val.product_name} price={val.price}
+            key={val.id} variation_id={val.id} imagePath={`images/${val.image_prefix}1.jpg`} name={val.product_name} price={val.price}
             productPath={`/product/${val.product_id}/${val.product_name.replace(/\s/g, '-').toLowerCase()}`} variation_cat={val.variation_category} variation_name={val.variation_name} in_stock={val.quantity}
             quantity_in_cart={val.quantity_in_cart} /></Panel>)
       }));

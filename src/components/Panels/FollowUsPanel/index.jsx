@@ -19,17 +19,17 @@ function FollowUsPanel() {
           <Row>
             <Col xs={24} sm={12} md={8} lg={8}>
               <a href="https://www.instagram.com/p/CYw6WWtv3PN/" target="_blank" rel="noreferrer noopener">
-                <img src="../../../public/images/instagram-pic3.jpg" className="follow-us-buttonIMG"></img>
+                <img src="images/instagram-pic3.jpg" className="follow-us-buttonIMG"></img>
               </a>
             </Col>
             <Col xs={24} sm={12} md={8} lg={8}>
               <a href="https://www.instagram.com/p/CZSVHYgP3Cg/" target="_blank" rel="noreferrer noopener">
-                <img src="../../../public/images/instagram-pic2.jpg" className="follow-us-buttonIMG"></img>
+                <img src="images/instagram-pic2.jpg" className="follow-us-buttonIMG"></img>
               </a>
             </Col>
             <Col xs={24} sm={24} md={8} lg={8} className="bigger-pic">
               <a href="https://www.instagram.com/p/CaIwGicPonB/" target="_blank" rel="noreferrer noopener">
-                <img src="../../../public/images/instagram-pic1.jpg" className="follow-us-buttonIMG"></img>
+                <img src="images/instagram-pic1.jpg" className="follow-us-buttonIMG"></img>
               </a>
             </Col>
           </Row>

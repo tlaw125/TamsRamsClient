@@ -36,32 +36,32 @@ function Gallery(props) {
             {!mobileScreen &&
                 <Grid fluid className="gallery">
                     <Row className="gallery-row">
-                        <Image imagePath={`../../../../public/images/${props.image_prefix}1.jpg`}/>
+                        <Image imagePath={`images/${props.image_prefix}1.jpg`}/>
                     </Row>
                     <Row className="gallery-row">
                         <Col xs={12}>
-                            <Image imagePath={`../../../../public/images/${props.image_prefix}2.jpg`} />
+                            <Image imagePath={`images/${props.image_prefix}2.jpg`} />
                         </Col>
                         <Col xs={12}>
-                            <Image imagePath={`../../../../public/images/${props.image_prefix}3.jpg`} />
+                            <Image imagePath={`images/${props.image_prefix}3.jpg`} />
                         </Col>
                     </Row>
                     <Row className="gallery-row">
-                        <Image imagePath={`../../../../public/images/${props.image_prefix}4.jpg`}/>
+                        <Image imagePath={`images/${props.image_prefix}4.jpg`}/>
                     </Row>
                     <Row className="gallery-row">
                         <Col xs={12}>
-                            <Image imagePath={`../../../../public/images/${props.image_prefix}5.jpg`} />
+                            <Image imagePath={`images/${props.image_prefix}5.jpg`} />
                         </Col>
                         <Col xs={12}>
-                            <Image imagePath={`../../../../public/images/${props.image_prefix}6.jpg`} />
+                            <Image imagePath={`images/${props.image_prefix}6.jpg`} />
                         </Col>
                     </Row>
                     <Row className="gallery-row">
-                        <Image imagePath={`../../../../public/images/${props.image_prefix}7.jpg`}/>
+                        <Image imagePath={`images/${props.image_prefix}7.jpg`}/>
                     </Row>
                     <Row className="gallery-row">
-                        <Image imagePath={`../../../../public/images/${props.image_prefix}8.jpg`}/>
+                        <Image imagePath={`images/${props.image_prefix}8.jpg`}/>
                     </Row>
                 </Grid>
             }
@@ -70,28 +70,28 @@ function Gallery(props) {
                 <div className='image-carousel'>
                     <Carousel >
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}1.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}1.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}2.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}2.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}3.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}3.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}4.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}4.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}5.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}5.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}6.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}6.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}7.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}7.jpg`} className="img-in-carousel" />
                         </div>
                         <div>
-                            <img src={`../../../../public/images/${props.image_prefix}8.jpg`} className="img-in-carousel" />
+                            <img src={`images/${props.image_prefix}8.jpg`} className="img-in-carousel" />
                         </div>
                     </Carousel>
                 </div>}

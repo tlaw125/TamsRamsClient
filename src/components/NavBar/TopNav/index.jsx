@@ -57,7 +57,7 @@ function TopNav() {
           <a href="/" className="tams-rams">
             <div className="logo-container">
               <h1>TAM'S</h1>
-              <img src={"../../../public/tams-rams-logomark.svg"} className="logo-img"></img>
+              <img src={"tams-rams-logomark.svg"} className="logo-img"></img>
               <h1>RAMS</h1>
             </div></a>
         </Nav>
