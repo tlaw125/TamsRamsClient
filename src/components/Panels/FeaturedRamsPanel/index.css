@@ -1,15 +1,16 @@
-.featured-rams-panel{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.title{
+.title {
     padding: 36px 0px 24px 12px;
 }
 
+@media screen and (min-width: 1280px) {
+    .featured-rams-panel {
+        padding: 0 8%;
+    }
+}
+
 @media screen and (min-width: 600px) and (max-width: 992px) {
-    .blackram{
+    .blackram {
         margin: 0% 15%;
         max-width: 70%;
     }
-  }
+}
