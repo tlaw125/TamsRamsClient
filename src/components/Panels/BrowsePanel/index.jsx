@@ -37,7 +37,7 @@ function Browse() {
 
     let cards = [];
 
-    const errMessage = (<Delayed key="BP" waitBeforeShow={500}><h4 className="no-products-header">Sorry,
+    const errMessage = (<Delayed key="BP" waitBeforeShow={5000}><h4 className="no-products-header">Sorry,
         there are currently no products available for this
         category :(</h4></Delayed>);
 

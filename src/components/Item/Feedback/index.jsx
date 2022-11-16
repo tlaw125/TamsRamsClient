@@ -32,7 +32,7 @@ function Feedback(props) {
         return () => { isMounted = false };
     }, []);
 
-    const errMessage = (<Delayed key="FI" waitBeforeShow={500}><h6 className="no-products-header">There
+    const errMessage = (<Delayed key="FI" waitBeforeShow={3000}><h6 className="no-products-header">There
         are currently no reviews for this product.</h6></Delayed>);
 
     const [placement, setPlacement] = useState("right");

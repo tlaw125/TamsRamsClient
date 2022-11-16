@@ -138,7 +138,7 @@ function Item() {
 
                 {/* If they enter an incorrect product URL */}
                 {productInfo.length < 1 &&
-                    <Delayed waitBeforeShow={1000}><h3 className="product-error-message">Sorry, we couldn't find the product you were looking for :(</h3></Delayed>
+                    <Delayed waitBeforeShow={20000}><h3 className="product-error-message">Sorry, we couldn't find the product you were looking for :(</h3></Delayed>
                 }
 
             </>

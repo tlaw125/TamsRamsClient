@@ -34,7 +34,7 @@ function SeeAllReviewsModal(props) {
 
     let reviewCards = [];
 
-    const errMessage = (<Delayed key="SAM" waitBeforeShow={1000}><h6 className="no-products-header">There 
+    const errMessage = (<Delayed key="SAM" waitBeforeShow={3000}><h6 className="no-products-header">There 
     are currently no reviews for this product.</h6></Delayed>);
 
     if (reviewList.length > 0) {
