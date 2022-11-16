@@ -1,3 +1,8 @@
+.featured-rams-panel{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .title{
     padding: 36px 0px 24px 12px;
 }

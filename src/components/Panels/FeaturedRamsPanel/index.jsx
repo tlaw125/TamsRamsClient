@@ -7,7 +7,7 @@ function FeaturedRamsPanel() {
 
   const FeaturedRamsPanelInstance = ({ ...props }) => {
     return (
-      <Container >
+      <Container className="featured-rams-panel" >
         <div className="title">
           <h2>Featured Rams</h2>
         </div>

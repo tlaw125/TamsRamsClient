@@ -7,5 +7,6 @@
     padding: 0px 8% 48px 8%;
     display: flex;
     justify-content: center;
+    max-width: 1280px;
 }
 
