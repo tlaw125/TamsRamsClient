@@ -65,6 +65,13 @@
     padding: 8px 8px 0px 8px;
 }
 
+@media screen and (min-width: 1280px) {
+    .follow-us-frame {
+        padding: 0 8%;
+    }
+}
+
+
 @media screen and (min-width: 992px) {
     
     .yt-video{

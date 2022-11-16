@@ -7,6 +7,7 @@
     padding: 0px 8% 48px 8%;
     display: flex;
     justify-content: center;
+    max-height: 800px;
 }
 
 @media screen and (min-width: 1280px) {
