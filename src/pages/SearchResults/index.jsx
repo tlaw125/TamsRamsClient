@@ -35,7 +35,7 @@ function SearchResultsPage() {
 
     let cards = [];
 
-    const errMessage = (<Delayed key="SRP" waitBeforeShow={5000}><h4 className="no-products-header">Sorry,
+    const errMessage = (<Delayed key="SRP" waitBeforeShow={3000}><h4 className="no-products-header">Sorry,
         there are currently no products under this search :(</h4></Delayed>);
 
     if (searchList.length > 0) {

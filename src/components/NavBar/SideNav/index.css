@@ -1,22 +1,31 @@
-.sidenav-body{
+.sidenav-body {
     height: 920px;
-    margin-top: 16px;
 }
 
-.fa-icon{
+.fa-icon {
     padding-right: 8px;
 }
 
 .side-search-bar {
-     padding: 12px 4px;
+    padding: 12px 4px;
 }
 
-.side-nav-search-bar{
+.side-nav-search-bar {
     background-color: black !important;
     color: white !important;
 }
-    
-.side-nav-search-icon{
+
+.side-nav-search-icon {
     background-color: black !important;
     color: white !important;
+}
+
+@media screen and (min-width: 480px) {
+    .sidenav-body {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+
 }
