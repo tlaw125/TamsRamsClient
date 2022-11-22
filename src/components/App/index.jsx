@@ -20,7 +20,6 @@ import "./App.css";
 import { Route, Routes, Router } from 'react-router-dom';
 
 function App() {
-  // About, Terms, and Contact components still need to be created
   return (
     <div className="app">
       <NavBar />
@@ -42,7 +41,7 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
+      <div className="app_footer"><Footer /></div>
     </div>
   );
 }
