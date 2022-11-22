@@ -14,6 +14,7 @@ import ShippingPage from "../../pages/Shipping";
 import OrderConfirmationPage from "../../pages/OrderConfirmation";
 import PrivacyPolicy from "../../pages/PrivacyPolicy";
 import TermsConditions from "../../pages/TermsConditions";
+import Footer from "../Footer";
 import '../../themes/findfins.less';
 import "./App.css";
 import { Route, Routes, Router } from 'react-router-dom';
