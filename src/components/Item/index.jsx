@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Row, Col } from 'rsuite';
+import { Grid, Row, Col, Loader } from 'rsuite';
 import Description from './Description'
 import Gallery from './Gallery'
 import Form from './Form'
@@ -15,6 +15,7 @@ function Item() {
     const minwidth = 708;
     const [mobileScreen, setMobileScreen] = useState(false);
     const [smallerScreen, setSmallerScreen] = useState(false);
+    const [isLoading, setLoading] = useState(true);
 
     let { id, product_name } = useParams();
     let productName = product_name.replace(/-/g, ' ');
@@ -30,7 +31,10 @@ function Item() {
                 productName: productName
             }
         }).then((response) => {
-            if (isMounted) setProductInfo(response.data);
+            if (isMounted) {
+                setProductInfo(response.data);
+                setLoading(false);
+            }
         })
         return () => { isMounted = false };
     }, []);
@@ -74,11 +78,11 @@ function Item() {
         };
     }, []);
 
-    const ItemInstance = ({ ...props }) => {
+    const ItemInstance = () => {
         return (
             <>
-
-                {productInfo.map((val) => {
+                {isLoading && <div className="page_loader"><Loader size="lg" /></div>}
+                {!isLoading && productInfo.map((val) => {
                     return (
                         <div key={val.id}>
                             {!mobileScreen && !smallerScreen &&
@@ -138,7 +142,7 @@ function Item() {
 
                 {/* If they enter an incorrect product URL */}
                 {productInfo.length < 1 &&
-                    <Delayed waitBeforeShow={20000}><h3 className="product-error-message">Sorry, we couldn't find the product you were looking for :(</h3></Delayed>
+                    <Delayed waitBeforeShow={30000}><h3 className="product-error-message">Sorry, we couldn't find the product you were looking for :(</h3></Delayed>
                 }
 
             </>

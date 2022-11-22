@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col } from 'rsuite';
+import { Row, Col, Loader } from 'rsuite';
 import ProductCard from "../../components/Cards/ProductCard";
 import { useSearchParams } from 'react-router-dom';
 import Axios from 'axios';
@@ -9,6 +9,7 @@ import Delayed from "../../components/Delayed";
 function SearchResultsPage() {
 
     const [searchList, setSearchList] = useState([]);
+    const [isLoading, setLoading] = useState(true);
 
     const [searchParams] = useSearchParams();
     let searchQuery = searchParams.get("q");
@@ -28,14 +29,17 @@ function SearchResultsPage() {
                 searchQuery: searchQueryFormatted
             }
         }).then((response) => {
-            if (isMounted) setSearchList(response.data);
+            if (isMounted) {
+                setSearchList(response.data);
+                setLoading(false);
+            }
         })
         return () => { isMounted = false };
     }, [searchParams]);
 
     let cards = [];
 
-    const errMessage = (<Delayed key="SRP" waitBeforeShow={3000}><h4 className="no-products-header">Sorry,
+    const errMessage = (<Delayed key="SRP" waitBeforeShow={30000}><h4 className="no-products-header">Sorry,
         there are currently no products under this search :(</h4></Delayed>);
 
     if (searchList.length > 0) {
@@ -51,19 +55,21 @@ function SearchResultsPage() {
     const SearchResultsPageInstance = ({ ...props }) => {
         return (
             <div className="SearchResultsPage">
-                <div>
+                {isLoading && <div className="page_loader"><Loader size="lg" /></div>}
+                {!isLoading &&
+                    <div>
 
-                    <Row className="search-row">{<h3 className="search-header">Search Results for "{searchQuery}"</h3>}</Row>
+                        <Row className="search-row">{<h3 className="search-header">Search Results for "{searchQuery}"</h3>}</Row>
 
-                    {searchList.length > 0 && (<>
-                        <Row><div>{cards}</div></Row>
-                    </>)}
+                        {searchList.length > 0 && (<>
+                            <Row><div>{cards}</div></Row>
+                        </>)}
 
-                    {searchList.length == 0 && (<>
-                        <div>{errMessage}</div>
-                    </>)}
+                        {searchList.length == 0 && (<>
+                            <div>{errMessage}</div>
+                        </>)}
 
-                </div>
+                    </div>}
             </div>
         );
     };

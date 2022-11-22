@@ -4,7 +4,7 @@ import SeeAllReviewsModal from './See All Modal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from 'react-router-dom';
-import { Animation } from "rsuite";
+import { Animation, Loader } from "rsuite";
 import Axios from 'axios';
 import Delayed from '../../Delayed';
 import "./index.css";
@@ -15,6 +15,7 @@ function Feedback(props) {
     const [reviewList, setReviewList] = useState([]);
     const [firstReviewIndex, setFirstReviewIndex] = useState(0);
     const [secondReviewIndex, setSecondReviewIndex] = useState(4);
+    const [isLoading, setLoading] = useState(true);
     let productName = product_name.replace(/-/g, ' ');
 
 
@@ -27,12 +28,15 @@ function Feedback(props) {
                 productName: productName
             }
         }).then((response) => {
-            if (isMounted) setReviewList(response.data);
+            if (isMounted) {
+                setReviewList(response.data);
+                setLoading(false);
+            }
         })
         return () => { isMounted = false };
     }, []);
 
-    const errMessage = (<Delayed key="FI" waitBeforeShow={3000}><h6 className="no-products-header">There
+    const errMessage = (<Delayed key="FI" waitBeforeShow={10000}><h6 className="no-products-header">There
         are currently no reviews for this product.</h6></Delayed>);
 
     const [placement, setPlacement] = useState("right");
@@ -85,7 +89,8 @@ function Feedback(props) {
     const FeedbackInstance = () => {
         return (
             <div className="feedback">
-                {reviewList.length > 0 && (<>
+                {isLoading && <div className="review_loader"><Loader size="md" /></div>}
+                {!isLoading && reviewList.length > 0 && (<>
                     <div className="feedback-title-frame">
                         <div className='feedback-title-and-see-all-frame'>
                             <div className="feedback-title">

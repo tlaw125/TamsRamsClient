@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Row, Col } from 'rsuite';
+import { Grid, Row, Col, Loader } from 'rsuite';
 import ProductCard from '../../Cards/ProductCard';
 import BreadCrumb from '../../BreadCrumb';
 import ShowSortBy from '../../ShowSortBy';
@@ -14,6 +14,7 @@ function Browse() {
 
     let { category, subcategory } = useParams();
     const [browseList, setBrowseList] = useState([]);
+    const [isLoading, setLoading] = useState(true);
 
     const [searchParams] = useSearchParams();
     let sortby = searchParams.get("sortby");
@@ -30,14 +31,17 @@ function Browse() {
                 orderby: orderby
             }
         }).then((response) => {
-            if (isMounted) setBrowseList(response.data);
+            if (isMounted){
+                setBrowseList(response.data);
+                setLoading(false);
+            }
         })
         return () => { isMounted = false };
     }, []);
 
     let cards = [];
 
-    const errMessage = (<Delayed key="BP" waitBeforeShow={5000}><h4 className="no-products-header">Sorry,
+    const errMessage = (<Delayed key="BP" waitBeforeShow={30000}><h4 className="no-products-header">Sorry,
         there are currently no products available for this
         category :(</h4></Delayed>);
 
@@ -69,7 +73,8 @@ function Browse() {
     const BrowseInstance = ({ ...props }) => {
         return (
             <div className="BrowsePage">
-                <div>
+                {isLoading && <div className="page_loader"><Loader size="lg" /></div>}
+                {!isLoading && <div>
 
                     <Row>
                         <BreadCrumb prevPage={prevPage} prevPageLink={prevPageLink} page={browseHeader} />
@@ -88,7 +93,7 @@ function Browse() {
 
                     {/* <Row><Pages /></Row> */}
 
-                </div>
+                </div>}
             </div>
         );
     };

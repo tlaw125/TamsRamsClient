@@ -32,6 +32,13 @@
     padding: 0px 8px;
 }
 
+.review_loader{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    padding-top: 24px;
+}
+
 @media screen and (min-width: 995px) {
     .feedback-div{
         display: flex;

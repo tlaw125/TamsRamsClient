@@ -1,0 +1,33 @@
+.privacy-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privacy-contents{
+    padding: 16px;
+    max-width: 980px;
+}
+
+.privacy-header{
+    text-align: center;
+    padding: 16px 0px 0px 0px;
+}
+
+.privacy-sub-header{
+    padding: 8px 0px 0px 20px;
+}
+
+.privacy-sub-sub-header{
+    padding: 8px 8px 8px 0px;
+    text-decoration: underline;
+}
+
+.privacy-info{
+    padding: 8px 0px;
+    color: rgb(50, 50, 50);
+}
+
+.privacy-bold{
+    color: black
+}

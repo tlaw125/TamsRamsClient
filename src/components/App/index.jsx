@@ -12,6 +12,8 @@ import PageNotFound from "../../pages/PageNotFound";
 import SearchResultsPage from "../../pages/SearchResults";
 import ShippingPage from "../../pages/Shipping";
 import OrderConfirmationPage from "../../pages/OrderConfirmation";
+import PrivacyPolicy from "../../pages/PrivacyPolicy";
+import TermsConditions from "../../pages/TermsConditions";
 import '../../themes/findfins.less';
 import "./App.css";
 import { Route, Routes, Router } from 'react-router-dom';
@@ -35,9 +37,12 @@ function App() {
         <Route path="/shipping" element={<ShippingPage />} />
         <Route path="/search-results" element={<SearchResultsPage />} />
         <Route path="/order-confirmed" element={<OrderConfirmationPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      </div>
+      <Footer />
+    </div>
   );
 }
 

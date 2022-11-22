@@ -1,11 +1,138 @@
-.footer {    
-    background-color:black;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 24px 20%;
+.footer {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    font-size: 12px;
 }
 
-.instagram{
+.footer-header {
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+
+.footer-middle {
+    padding: 0px 8px
+}
+
+.footer-right {
+    padding: 0px 8px
+}
+
+
+.footer-help-link {
     color: white;
+    transition: 250ms;
+}
+
+.footer-socials {
+    padding: 8px;
+    color: white;
+    transition: 250ms;
+}
+
+.footer-socials:hover {
+    color: #2ea3e2 !important;
+}
+
+@media screen and (min-width: 960px) {
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 24px 8%;
+    }
+
+    .footer-left {
+        max-width: 300px;
+        padding: 0px 8px
+    }
+
+    .footer-help-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 4px 0px;
+    }
+
+    .footer-help-link {
+        padding: 2px 0px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 960px) {
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 24px 4%;
+    }
+
+    .footer-left {
+        max-width: 300px;
+        padding: 0px 8px
+    }
+
+    .footer-help-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 4px 0px;
+    }
+
+    .footer-help-link {
+        padding: 2px 0px;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 12px;
+        text-align: center;
+    }
+
+    .footer-left {
+        padding: 0px 8px
+    }
+
+    .footer-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-help-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 4px 0px;
+    }
+
+    .footer-help-link {
+        padding: 4px 0px;
+    }
+
+    .footer-divider{
+        border-bottom: 1px solid rgb(125, 125, 125);
+        width: 100%;
+        margin: 12px 0px;
+    }
+
+    .footer-vertical-divider{
+        background-color: rgb(125, 125, 125) !important;
+    }
+
 }

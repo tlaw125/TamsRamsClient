@@ -18,5 +18,13 @@
     text-align: center;
 }
 
+.page_loader{
+    height: 800px;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    padding-top: 24px;
+}
+
 
 

@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import { Modal } from 'rsuite';
+import React, { useEffect, useState } from "react";
+import { Modal, Loader } from 'rsuite';
 import ModalReview from "../ModalReview";
 import Pages from "../../../Pagination";
 import { useParams } from 'react-router-dom';
@@ -10,6 +10,7 @@ import "./index.css";
 function SeeAllReviewsModal(props) {
 
     const [open, setOpen] = useState(false);
+    const [isLoading, setLoading] = useState(true);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -27,15 +28,18 @@ function SeeAllReviewsModal(props) {
                 productName: productName
             }
         }).then((response) => {
-            if (isMounted) setReviewList(response.data);
+            if (isMounted) {
+                setReviewList(response.data);
+                setLoading(false);
+            }
         })
         return () => { isMounted = false };
     }, []);
 
     let reviewCards = [];
 
-    const errMessage = (<Delayed key="SAM" waitBeforeShow={3000}><h6 className="no-products-header">There 
-    are currently no reviews for this product.</h6></Delayed>);
+    const errMessage = (<Delayed key="SAM" waitBeforeShow={5000}><h6 className="no-products-header">There
+        are currently no reviews for this product.</h6></Delayed>);
 
     if (reviewList.length > 0) {
         reviewCards.push(reviewList.map((val) => {
@@ -49,21 +53,26 @@ function SeeAllReviewsModal(props) {
 
     const SeeAllReviewsModalInstance = () => {
         return (
-            <div className="modal-container">
-                <a onClick={handleOpen} className="see-all-reviews-button">See All Reviews</a>
+            <>
+                {isLoading && <div className="modal_loader"><Loader size="md" /></div>}
+                {!isLoading &&
+                    <div className="modal-container">
+                        <a onClick={handleOpen} className="see-all-reviews-button">See All Reviews</a>
 
-            <Modal overflow={true} show={open} onHide={handleClose} className="see-all-modal">
-                <Modal.Header>
-                    <Modal.Title>All Reviews</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <div>{reviewCards}</div>
-                </Modal.Body>
-                <Modal.Footer>
-                    {/* <Pages/> */}
-                </Modal.Footer>
-            </Modal>
-        </div>
+                        <Modal overflow={true} show={open} onHide={handleClose} className="see-all-modal">
+                            <Modal.Header>
+                                <Modal.Title>All Reviews</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <div>{reviewCards}</div>
+                            </Modal.Body>
+                            <Modal.Footer>
+                                {/* <Pages/> */}
+                            </Modal.Footer>
+                        </Modal>
+                    </div>}
+            </>
+
         );
     };
 

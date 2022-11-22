@@ -14,3 +14,10 @@
     color: rgb(0, 170, 255);
     text-decoration: underline;
 }
+
+.modal_loader{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    padding-top: 24px;
+}
