@@ -69,7 +69,7 @@ function Footer() {
       <div className="footer">
         <div className="footer-left">
           <p className='footer-header'>Tam's Rams</p>
-          <p className="footer-blurb">Here at Tam's Rams, we strive to popularize the aquarium hobby by providing unique and
+          <p className="footer-blurb">Here at Tam's Rams, we strive to promote the aquarium hobby by providing unique and
             rare fish to fishkeepers across the country. Every fish listed for sale on this site has been bred in our
             fish room with love and care. They are eagerly waiting for their forever homes!
           </p>

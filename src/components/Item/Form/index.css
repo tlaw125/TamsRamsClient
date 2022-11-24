@@ -37,29 +37,18 @@
     padding: 8px 0px 8px 0px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-/* .form-sizing-button{
-    margin: 0px 8px;
-    width: 40%;
-    min-width: 140px;
-} */
-
 .form-grouping-button{
-    padding: 0px 8px;
-    min-width: 108px;
-    max-width: 200px;
-    flex: 1;
-    flex-wrap: wrap;
+    margin: 8px 2px;
+    width: 156px;
 }
 
 .form-grouping-active-button{
-    padding: 0px 8px;
-    min-width: 108px;
-    max-width: 200px;
-    flex: 1;
-    flex-wrap: wrap;
+    margin: 8px 2px;
+    width: 156px;
     background-color: rgb(215, 215, 215) !important;
 }
 /* 
