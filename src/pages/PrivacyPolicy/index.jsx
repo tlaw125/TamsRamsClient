@@ -1,12 +1,21 @@
 import React from "react";
 import { Panel, PanelGroup } from "rsuite";
 import "./index.css";
+import { Helmet } from "react-helmet-async";
 
 function PrivacyPolicy() {
 
     const PrivacyPolicyInstance = () => {
         return (
             <div className="privacy-frame">
+                <Helmet>
+                    <title>Privacy Policy</title>
+                    <meta name="description" content="The web privacy policy of Tam's Rams." />
+
+                    <meta name="robots" content="noindex" />
+
+                    <link rel="canonical" href="/privacy-policy" />
+                </Helmet>
                 <div className="privacy-contents">
                     <h2 className="privacy-header">Privacy Policy </h2>
 

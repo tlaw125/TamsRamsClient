@@ -1,12 +1,28 @@
 import React from "react";
 import { Icon, Panel, PanelGroup } from "rsuite";
+import { Helmet } from "react-helmet-async";
 import "./index.css";
 
 function AboutUs() {
 
+    let pathname = window.location.pathname;
+
     const AboutUsInstance = ({ ...props }) => {
         return (
             <div className="about-us-frame">
+                <Helmet>
+                    <title>About Us</title>
+                    <meta name="description" content="How we transformed our passion for the aquarium hobby into a small online store." />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Tam's Rams - About Us" />
+                    <meta property="og:description" content="How we transformed our passion for the aquarium hobby into a small online store." />
+                    <meta property="og:image" content="https://lh3.googleusercontent.com/tjTuVWllfm44_xebwQjBrPhJxmlWKMl25U3tz5KDGQ-9jJ7YEBpsrHFlhXMruNJiRN1LOBpS4wzO7rNCCkZaArKa5pCtbHMRwjFjAHUS3qDTmWUmb3SRy8M_dd8GzNXeT2Z6NFOs=w2400" />
+                    <meta
+                        property="og:url"
+                        content={"https://www.tamsrams.com" + pathname}
+                    />
+                    <link rel="canonical" href={pathname} />
+                </Helmet>
                 <div className="about-us-bg">
                     <h2 className="about-us-header">About Us</h2>
                     <p className="about-us-bg-text">From our fish room to yours!</p>
@@ -17,13 +33,13 @@ function AboutUs() {
                 <div className="about-us-contents">
                     <PanelGroup>
                         <Panel bordered>
-                        <h3 className="about-us-sub-header">Social Media</h3>
+                            <h3 className="about-us-sub-header">Social Media</h3>
 
-                        <p className="about-us-social-media-text">Check us out on Instagram and YouTube! You can find more pictures 
-                            and vides of our fish, and even see our breeding projects! There might 
-                            even be giveaways that may take place on these platforms, so make sure 
-                            to follow us for a chance to win!
-                        </p>
+                            <p className="about-us-social-media-text">Check us out on Instagram and YouTube! You can find more pictures
+                                and vides of our fish, and even see our breeding projects! There might
+                                even be giveaways that may take place on these platforms, so make sure
+                                to follow us for a chance to win!
+                            </p>
 
                             <div className="about-us-social-media">
 

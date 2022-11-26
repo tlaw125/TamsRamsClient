@@ -33,8 +33,8 @@ function ShippingPage() {
         box_width = 0, box_height = 0, box_weight = 0, box_dimensions = "";
 
     // console.log(location.state.subtotal);
-    console.log("Box Size: " + box_size);
-    console.log("Cart: " + cart);
+    // console.log("Box Size: " + box_size);
+    // console.log("Cart: " + cart);
 
     if (box_size == "small" || box_size == "plants_only") {
         box_length = 8; box_width = 8; box_height = 8, box_weight = 3;
@@ -78,7 +78,7 @@ function ShippingPage() {
         }
     }, []);
 
-    console.log("finalCart: " + JSON.stringify(finalCart));
+    // console.log("finalCart: " + JSON.stringify(finalCart));
 
 
     const handleSubmit = event => {
@@ -92,9 +92,9 @@ function ShippingPage() {
         setCity(event.target.city.value);
         setState(event.target.state.value);
         setZipcode(event.target.zip_code.value);
-        console.log(event.target.email.value);
-        console.log(event.target.first_name.value);
-        console.log(event.target.last_name.value);
+        // console.log(event.target.email.value);
+        // console.log(event.target.first_name.value);
+        // console.log(event.target.last_name.value);
         if (event.target.email.value.trim() == "" || event.target.first_name.value.trim() == "" || event.target.last_name.value.trim() == "") {
             // console.log("EMPTY FIELD");
             setFieldEmpty(true);
@@ -111,7 +111,7 @@ function ShippingPage() {
                     zip_code: event.target.zip_code.value
                 }
             }).then((response) => {
-                console.log(JSON.stringify(response.data));
+                // console.log(JSON.stringify(response.data));
                 let validated_address = response.data;
                 if ("Error" in validated_address.AddressValidateResponse.Address) {
                     // console.log("ERROR IN ADDRESS");
@@ -124,7 +124,7 @@ function ShippingPage() {
                     setState(validated_address.AddressValidateResponse.Address.State);
                     setZipcode(validated_address.AddressValidateResponse.Address.Zip5);
                     setValidated(true);
-                    console.log("info: " + validated_address.AddressValidateResponse.Address.City, validated_address.AddressValidateResponse.Address.State, validated_address.AddressValidateResponse.Address.Zip5);
+                    // console.log("info: " + validated_address.AddressValidateResponse.Address.City, validated_address.AddressValidateResponse.Address.State, validated_address.AddressValidateResponse.Address.Zip5);
                     // console.log("box dimensions: " + box_length + box_width + box_height + box_weight);
                     Axios.get("https://tams-rams.herokuapp.com/api/get-shipping-rates", {
                         params:
@@ -199,12 +199,12 @@ function ShippingPage() {
         setServiceName(e.target.getAttribute("service_name"));
         let serviceCode = e.target.getAttribute("service_code");
         setServicePrice(e.target.value);
-        console.log("radio: " + serviceName + serviceCode + servicePrice);
+        // console.log("radio: " + serviceName + serviceCode + servicePrice);
         setShippingSelected(true);
 
         let tempCart = finalCart;
         const shipping_exists = tempCart.findIndex(element => { return element.id === "shipping_method" });
-        console.log("Shipping exists: " + shipping_exists);
+        // console.log("Shipping exists: " + shipping_exists);
         if (shipping_exists == -1) {
             let item = {};
             item["id"] = "shipping_method";

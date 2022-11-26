@@ -4,10 +4,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import CartContentsPanel from './CartContentsPanel';
 import BreadCrumb from '../../BreadCrumb';
 import Axios from 'axios';
+import { Helmet } from "react-helmet-async";
 import "./index.css";
 
 function ShoppingCartPanel() {
 
+    let pathname = window.location.pathname;
     let cartItems = [];
     let totalNuminCart = 0, subtotal = 0, totalMinBagVal = 0, totalMaxBagVal = 0;
     const verySmallWidth = 480;
@@ -143,15 +145,15 @@ function ShoppingCartPanel() {
                         quantity_in_cart={val.quantity_in_cart} />)
             }));
         }
-        if (totalMinBagVal == 0 && boxSize != "plants_only") {setBoxSize("plants_only")}
+        if (totalMinBagVal == 0 && boxSize != "plants_only") { setBoxSize("plants_only") }
         if (bagValue != totalMinBagVal && bagValue != totalMaxBagVal) {
-            if (totalMinBagVal <= 6) { 
-                if (totalMinBagVal <= 2) {setBoxSize("small")}
-                else if(totalMinBagVal <= 5) {setBoxSize("medium")}
-                else {setBoxSize("large")}
-                setBagValue(totalMinBagVal); 
+            if (totalMinBagVal <= 6) {
+                if (totalMinBagVal <= 2) { setBoxSize("small") }
+                else if (totalMinBagVal <= 5) { setBoxSize("medium") }
+                else { setBoxSize("large") }
+                setBagValue(totalMinBagVal);
             }
-            else { setBagValue(totalMaxBagVal); setBoxSize("large")}
+            else { setBagValue(totalMaxBagVal); setBoxSize("large") }
         }
 
         // if (totalMinBagVal <= 6) { bagValue = totalMinBagVal; }
@@ -163,6 +165,13 @@ function ShoppingCartPanel() {
     function CartPanelInstance() {
         return (
             <>
+                <Helmet>
+                    <title>Tam's Rams Shopping Cart</title>
+                    <meta name="description" content="View the items you've added into your shopping cart." />
+                    <meta property="og:type" content="website" />
+                    <meta name="robots" content="noindex" />
+                    <link rel="canonical" href={pathname} />
+                </Helmet>
                 {!isEmpty && (<div className="CartPage">
 
                     <Row>
@@ -209,7 +218,7 @@ function ShoppingCartPanel() {
                             {cartOverMax && (<div className="cart-over-max-frame">
                                 <p className="cart-over-max-header">Too many items in the cart.</p>
                                 <p className="cart-over-max-text">The number of products in your cart
-                                    currently exceeds the limit allowed for our largest box size. Unfortunately, we are unable to 
+                                    currently exceeds the limit allowed for our largest box size. Unfortunately, we are unable to
                                     do bulk orders because it would compromise the safety of the fish. Feel free to place an additional order if you want to buy more fish.</p>
                             </div>)}
                             <p className="ship-info-text">Shipping will be calculated at checkout</p>

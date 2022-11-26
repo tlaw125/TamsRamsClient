@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Input, Row, Whisper, Icon, Tooltip, ButtonToolbar, Button, Alert } from "rsuite";
 import { send } from 'emailjs-com';
+import { Helmet } from "react-helmet-async";
 import "./index.css";
 
 function ContactUs() {
+
+    let pathname = window.location.pathname;
 
     const [fieldEmpty, setFieldEmpty] = useState(false);
     const toSend = {
@@ -50,6 +53,20 @@ function ContactUs() {
     const ContactUsInstance = () => {
         return (
             <div className="contact-us-frame">
+
+                <Helmet>
+                    <title>Contact Us</title>
+                    <meta name="description" content="Get in touch with us by sending a message through this page or emailing us at shop.tamsrams@gmail.com" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Tam's Rams - Contact Us" />
+                    <meta property="og:description" content="Get in touch with us by sending a message through this page or emailing us at shop.tamsrams@gmail.com" />
+                    <meta property="og:image" content="https://lh3.googleusercontent.com/tjTuVWllfm44_xebwQjBrPhJxmlWKMl25U3tz5KDGQ-9jJ7YEBpsrHFlhXMruNJiRN1LOBpS4wzO7rNCCkZaArKa5pCtbHMRwjFjAHUS3qDTmWUmb3SRy8M_dd8GzNXeT2Z6NFOs=w2400" />
+                    <meta
+                        property="og:url"
+                        content={"https://www.tamsrams.com" + pathname}
+                    />
+                    <link rel="canonical" href={pathname} />
+                </Helmet>
 
                 <h2 className="contact-us-header">Contact Us</h2>
                 <div className="contact-us-contents">

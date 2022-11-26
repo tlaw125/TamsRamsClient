@@ -3,17 +3,33 @@ import { Icon, Panel, PanelGroup } from "rsuite";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBox, faShield, faRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
+import { Helmet } from "react-helmet-async";
 
 function ShippingDoaPolicy() {
+
+    let pathname = window.location.pathname;
 
     const ShippingDoaPolicyInstance = ({ ...props }) => {
         return (
             <div className="shipping-doa-frame">
+                <Helmet>
+                    <title>Shipping and DOA Policy</title>
+                    <meta name="description" content="All fish ordered from Tam's Rams have a Live Arrival Guarantee as long as these guidelines are followed." />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Tam's Rams - Shipping and DOA Policy" />
+                    <meta property="og:description" content="All fish ordered from Tam's Rams have a Live Arrival Guarantee as long as these guidelines are followed." />
+                    <meta property="og:image" content="https://lh3.googleusercontent.com/tjTuVWllfm44_xebwQjBrPhJxmlWKMl25U3tz5KDGQ-9jJ7YEBpsrHFlhXMruNJiRN1LOBpS4wzO7rNCCkZaArKa5pCtbHMRwjFjAHUS3qDTmWUmb3SRy8M_dd8GzNXeT2Z6NFOs=w2400" />
+                    <meta
+                        property="og:url"
+                        content={"https://www.tamsrams.com" + pathname}
+                    />
+                    <link rel="canonical" href={pathname} />
+                </Helmet>
                 <div className="shipping-doa-contents">
                     <h2 className="shipping-doa-header">Shipping &amp; DOA Policy </h2>
                     <h3 className="shipping-doa-sub-header">Shipping Information</h3>
                     <p className="shipping-doa-lower-48"><b>Please Note: </b>We can only ship to the lower 48 states of the U.S. Hawaiian customers may place an order only if they have a permit to import fish.
-                    If you're from Hawaii and want to order, please <a href="/contact-us">contact us</a>.</p>
+                        If you're from Hawaii and want to order, please <a href="/contact-us">contact us</a>.</p>
 
                     <PanelGroup>
                         <Panel>

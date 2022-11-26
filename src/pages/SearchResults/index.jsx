@@ -5,9 +5,11 @@ import { useSearchParams } from 'react-router-dom';
 import Axios from 'axios';
 import "./index.css";
 import Delayed from "../../components/Delayed";
+import { Helmet } from "react-helmet-async";
 
 function SearchResultsPage() {
 
+    let pathname = window.location.pathname;
     const [searchList, setSearchList] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
@@ -55,6 +57,14 @@ function SearchResultsPage() {
     const SearchResultsPageInstance = ({ ...props }) => {
         return (
             <div className="SearchResultsPage">
+                <Helmet>
+                    <title>Tam's Rams Search Results {searchQuery}</title>
+                    <meta name="description" content="Here are the search results for your query." />
+
+                    <meta name="robots" content="noindex" />
+
+                    <link rel="canonical" href={pathname} />
+                </Helmet>
                 {isLoading && <div className="page_loader"><Loader size="lg" /></div>}
                 {!isLoading &&
                     <div>

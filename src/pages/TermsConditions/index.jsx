@@ -1,12 +1,21 @@
 import React from "react";
 import { Panel, PanelGroup } from "rsuite";
 import "./index.css";
+import { Helmet } from "react-helmet-async";
 
 function TermsConditions() {
 
     const TermsConditionsInstance = () => {
         return (
             <div className="terms-conditions-frame">
+                <Helmet>
+                    <title>Terms and Conditions</title>
+                    <meta name="description" content="The terms and conditions of Tam's Rams." />
+
+                    <meta name="robots" content="noindex" />
+
+                    <link rel="canonical" href="/terms-and-conditions" />
+                </Helmet>
                 <div className="terms-conditions-contents">
                     <h2 className="terms-conditions-header">Terms and Conditions</h2>
 
@@ -245,9 +254,9 @@ function TermsConditions() {
                             <h5 className="privacy-sub-sub-header">SECTION 17 - ENTIRE AGREEMENT</h5>
                             <p className="privacy-info">The failure of us to exercise or enforce any right or provision of these Terms and Conditions shall not constitute a waiver of such right or provision.
                                 <br /><br />
-                                These Terms and Conditions and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you 
+                                These Terms and Conditions and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you
                                 and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including,
-                                 but not limited to, any prior versions of the Terms and Conditions).
+                                but not limited to, any prior versions of the Terms and Conditions).
                                 <br /><br />
                                 Any ambiguities in the interpretation of these Terms and Conditions shall not be construed against the drafting party.
                             </p>
@@ -255,8 +264,8 @@ function TermsConditions() {
 
                         <Panel>
                             <h5 className="privacy-sub-sub-header">SECTION 18 - GOVERNING LAW</h5>
-                            <p className="privacy-info">These Terms and Conditions and any separate agreements whereby we provide you Services shall 
-                            be governed by and construed in accordance with the laws of San Francisco, CA 94112.
+                            <p className="privacy-info">These Terms and Conditions and any separate agreements whereby we provide you Services shall
+                                be governed by and construed in accordance with the laws of San Francisco, CA 94112.
                             </p>
                         </Panel>
 
@@ -264,9 +273,9 @@ function TermsConditions() {
                             <h5 className="privacy-sub-sub-header">SECTION 19 - CHANGES TO TERMS AND CONDITIONS</h5>
                             <p className="privacy-info">You can review the most current version of the Terms and Conditions at any time at this page.
                                 <br /><br />
-                                We reserve the right, at our sole discretion, to update, change or replace any part of these Terms and Conditions by 
-                                posting updates and changes to our website. It is your responsibility to check our website periodically for changes. 
-                                Your continued use of or access to our website or the Service following the posting of any changes to these 
+                                We reserve the right, at our sole discretion, to update, change or replace any part of these Terms and Conditions by
+                                posting updates and changes to our website. It is your responsibility to check our website periodically for changes.
+                                Your continued use of or access to our website or the Service following the posting of any changes to these
                                 Terms and Conditions constitutes acceptance of those changes.
                             </p>
                         </Panel>

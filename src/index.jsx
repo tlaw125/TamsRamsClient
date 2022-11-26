@@ -5,11 +5,14 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop"
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
     <Router>
         <ScrollToTop />
-        <App/>
+        <HelmetProvider>
+            <App />
+        </HelmetProvider>
     </Router>,
     document.getElementById('root')
 );
