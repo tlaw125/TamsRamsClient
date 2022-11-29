@@ -307,7 +307,7 @@ function ShippingPage() {
         </Row>
         <Row className="val-ad-button-and-message-frame">
             <ButtonToolbar>
-                <Button appearance="primary" type="submit" className="validate-address-button" >Validate Address</Button>
+                <Button appearance="primary" type="submit" >Validate Address</Button>
                 <Whisper speaker={<Tooltip>Checks if address is valid and converts it into proper formatting if needed. </Tooltip>}>
                     <Icon icon="help-o" />
                 </Whisper>
