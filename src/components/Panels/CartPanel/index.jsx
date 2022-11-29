@@ -125,7 +125,7 @@ function ShoppingCartPanel() {
     else {
         // totalNuminCart = 0, totalMinBagVal = 0, totalMaxBagVal = 0;
         for (const prod of cartList) {
-            console.log(cartList);
+            // console.log(cartList);
             cartItems.push(prod.map((val) => {
                 if (val.quantity < val.quantity_in_cart) {
                     cart[val.id] = val.quantity;
@@ -134,8 +134,8 @@ function ShoppingCartPanel() {
                 }
                 totalNuminCart += val.quantity_in_cart;
                 subtotal += val.quantity_in_cart * val.price;
-                console.log("subtotal: " + subtotal);
-                console.log(val.product_name, val.quantity_in_cart, val.min_bag_value, val.max_bag_value);
+                // console.log("subtotal: " + subtotal);
+                // console.log(val.product_name, val.quantity_in_cart, val.min_bag_value, val.max_bag_value);
                 totalMinBagVal += val.quantity_in_cart * val.min_bag_value;
                 totalMaxBagVal += val.quantity_in_cart * val.max_bag_value;
                 return (
@@ -158,8 +158,8 @@ function ShoppingCartPanel() {
 
         // if (totalMinBagVal <= 6) { bagValue = totalMinBagVal; }
         // else { bagValue = totalMaxBagVal; }
-        console.log("bag value: " + bagValue);
-        console.log("max bag value: " + totalMaxBagVal);
+        // console.log("bag value: " + bagValue);
+        // console.log("max bag value: " + totalMaxBagVal);
     }
 
     function CartPanelInstance() {

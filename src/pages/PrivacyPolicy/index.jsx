@@ -96,7 +96,7 @@ function PrivacyPolicy() {
 
                         <Panel>
                             <h5 className="privacy-sub-sub-header">COOKIES</h5>
-                            <p className="privacy-info">Currently we are not using any cookies, but this may change in future updates.
+                            <p className="privacy-info">"Cookies" are data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit http://www.allaboutcookies.org.
                             </p>
                         </Panel>
 

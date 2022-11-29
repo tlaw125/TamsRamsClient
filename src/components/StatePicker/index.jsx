@@ -214,7 +214,7 @@ function StatePicker(props) {
   const [curState, setCurState] = React.useState(props.defaultValue ? props.defaultValue : "default");
 
   const handleInputChange = e => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setCurState(e.target.value);
   }
   

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import NavBar from '../NavBar';
 import Home from '../../pages/Home'
 import Product from '../../pages/Product';
@@ -28,10 +28,8 @@ function App() {
         <Route path="/shipping-doa-policy" element={<ShippingDoaPolicy />} />
         <Route path="/FAQ" element={<FAQ_Page />} />
         <Route path="/about-us" element={<AboutUs />} />
-        {/* <Route path="/terms" element={<Home />} /> */}
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/browse/:category/:subcategory" element={<Browse />} />
-        {/* <Route exact path="/product" element={<Product />} /> */}
         <Route exact path="/product/:id/:product_name" element={<Product />} />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/shipping" element={<ShippingPage />} />

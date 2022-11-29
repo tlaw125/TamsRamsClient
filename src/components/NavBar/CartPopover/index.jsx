@@ -78,7 +78,7 @@ function CartPopover() {
             if (count == Object.entries(cart).length) { setLoading(false); setCartChanged(false); setCartList(tempCart); }
           }
         }
-        console.log("cartList: " + cartList);
+        // console.log("cartList: " + cartList);
       })
     }
 
@@ -118,9 +118,9 @@ function CartPopover() {
     }
     else { setBagValue(totalMaxBagVal); setBoxSize("large")}
     }
-    console.log("popover: min bag value: " + totalMinBagVal);
-    console.log("popover: max bag value: " + totalMaxBagVal);
-    console.log("popover: box size: " + boxSize);
+    // console.log("popover: min bag value: " + totalMinBagVal);
+    // console.log("popover: max bag value: " + totalMaxBagVal);
+    // console.log("popover: box size: " + boxSize);
   }
 
 
