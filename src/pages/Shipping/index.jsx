@@ -228,7 +228,7 @@ function ShippingPage() {
     if (!isLoading) {
         shipOptions.push(shippingOptions.map((val) => {
             if (val.serviceCode == "ups_next_day_air" || val.serviceCode == "ups_next_day_air_saver" || val.serviceCode == "ups_2nd_day_air" || (val.serviceCode == "ups_ground" && state == "CA")) {
-                let adjustedShippingCost = (val.shipmentCost + 4).toFixed(2);
+                let adjustedShippingCost = (val.shipmentCost + 5).toFixed(2);
                 return (
                     <label key={val.serviceCode} className="shipping-options-radio-select">
                         <div><input type="radio" checked={serviceName === val.serviceName} service_name={val.serviceName} service_code={val.serviceCode} value={adjustedShippingCost} name={`shipping-option-${val.serviceCode}`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
