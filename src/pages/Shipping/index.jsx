@@ -31,19 +31,20 @@ function ShippingPage() {
     let cart = location.state.cart, shipOptions = [];
     let box_size = location.state.boxSize, box_length = 0,
         box_width = 0, box_height = 0, box_weight = 0, box_dimensions = "";
+    let usps_price = 22;
 
     // console.log(location.state.subtotal);
     // console.log("Box Size: " + box_size);
     // console.log("Cart: " + cart);
 
     if (box_size == "small" || box_size == "plants_only") {
-        box_length = 8; box_width = 8; box_height = 8, box_weight = 3;
+        box_length = 8; box_width = 8; box_height = 8, box_weight = 3, usps_price = 22;
     }
     else if (box_size == "medium") {
-        box_length = 10; box_width = 10; box_height = 8, box_weight = 5;
+        box_length = 10; box_width = 10; box_height = 8, box_weight = 5, usps_price = 29;
     }
     else if (box_size == "large") {
-        box_length = 12; box_width = 10; box_height = 8, box_weight = 6;
+        box_length = 12; box_width = 10; box_height = 8, box_weight = 6, usps_price = 33;
     }
     box_dimensions = box_length + "x" + box_width + "x" + box_height;
 
@@ -159,33 +160,6 @@ function ShippingPage() {
 
     }
 
-    // useEffect(() => {
-    //     let isMounted = true;
-    //     if (isValidated) {
-    //         Axios.get("https://tams-rams.herokuapp.com/api/get-shipping-rates", {
-    //             params:
-    //             {
-    //                 // address1: address1,
-    //                 // address2: address2,
-    //                 // city: validated_address.AddressValidateResponse.Address.City,
-    //                 // state: validated_address.AddressValidateResponse.Address.State,
-    //                 // zip_code: validated_address.AddressValidateResponse.Address.Zip5
-    //                 city: city,
-    //                 state: state,
-    //                 zip_code: zipcode
-    //             }
-    //         }).then((response) => {
-    //             if (isMounted) {
-    //                 // console.log(JSON.stringify(response.data));
-    //                 setShippingOptions(response.data);
-    //                 console.log("shipping options: " + shippingOptions);
-    //                 if (shippingOptions.length > 0) { setLoading(false); }
-    //             }
-    //         }
-    //         )
-    //     }
-    //     return () => { isMounted = false };
-    // }, [isValidated]);
 
     const handleValidatedChange = () => {
         setValidated(false);
@@ -250,12 +224,19 @@ function ShippingPage() {
 
         shipOptions.push(
             <form key="order-req" onSubmit={(e) => handleContinueToPayment(e)}>
-                <Input componentClass="textarea" rows={5} name="order_request" className="order-request-text-box" 
+                <Input componentClass="textarea" rows={5} name="order_request" className="order-request-text-box"
                     placeholder="Any requests you'd like to make regarding your order? Please note, we cannot guarantee every request. (255 character limit)" />
                 <ButtonToolbar className="continue-to-payment-button">
                     <Button appearance="primary" type="submit">Continue to Payment</Button>
                 </ButtonToolbar>
             </form>)
+
+        shipOptions.push(
+            <label key="usps_priority_shipping" className="shipping-options-radio-select">
+                <div><input type="radio" checked={serviceName === "USPS Priority Flat Rate"} service_name="USPS Priority Flat Rate" service_code="usps_priority_option" value={11.50} name={`usps_priority`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
+                    USPS Priority Flat Rate</div>
+                <div>${usps_price}.00</div>
+            </label>);
     }
 
     const handleContinueToPayment = (e) => {
