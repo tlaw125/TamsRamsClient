@@ -37,9 +37,9 @@ function TopNav() {
                 <Dropdown.Item href="/browse/fish/other?sortby=product_name&orderby=asc">Other</Dropdown.Item>
               </Dropdown.Menu>
               <Dropdown.Menu title="Plants">
-                <Dropdown.Item href="/browse/plant/all?sortby=product_name&orderby=asc">All Plants</Dropdown.Item>
-                <Dropdown.Item href="/browse/plant/moss?sortby=product_name&orderby=asc">Moss</Dropdown.Item>
-                <Dropdown.Item href="/browse/plant/stem?sortby=product_name&orderby=asc">Stem</Dropdown.Item>
+                <Dropdown.Item href="/browse/plants/all?sortby=product_name&orderby=asc">All Plants</Dropdown.Item>
+                <Dropdown.Item href="/browse/plants/moss?sortby=product_name&orderby=asc">Moss</Dropdown.Item>
+                <Dropdown.Item href="/browse/plants/stem?sortby=product_name&orderby=asc">Stem</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Nav>
