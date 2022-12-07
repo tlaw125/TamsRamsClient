@@ -213,6 +213,20 @@ function ShippingPage() {
 
         }));
 
+        shipOptions.push(
+            <label key="usps_priority_shipping" className="shipping-options-radio-select">
+                <div><input type="radio" checked={serviceName === "USPS Priority Flat Rate"} service_name="USPS Priority Flat Rate" service_code="usps_priority_option" value={11.50} name={`usps_priority`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
+                    USPS Priority Flat Rate</div>
+                <div>${usps_price}.00</div>
+            </label>);
+
+        shipOptions.push(
+            <label key="free_shipping" className="shipping-options-radio-select">
+                <div><input type="radio" checked={serviceName === "Free Shipping"} service_name="Free Shipping" service_code="free_option" value={0} name={`free_shipping`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
+                    Free Shipping</div>
+                <div>$0</div>
+            </label>);
+
         if (box_size == "plants_only") {
             shipOptions.push(
                 <label key="plants_only_shipping" className="shipping-options-radio-select">
@@ -230,13 +244,6 @@ function ShippingPage() {
                     <Button appearance="primary" type="submit">Continue to Payment</Button>
                 </ButtonToolbar>
             </form>)
-
-        shipOptions.push(
-            <label key="usps_priority_shipping" className="shipping-options-radio-select">
-                <div><input type="radio" checked={serviceName === "USPS Priority Flat Rate"} service_name="USPS Priority Flat Rate" service_code="usps_priority_option" value={11.50} name={`usps_priority`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
-                    USPS Priority Flat Rate</div>
-                <div>${usps_price}.00</div>
-            </label>);
     }
 
     const handleContinueToPayment = (e) => {
