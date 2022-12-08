@@ -75,7 +75,7 @@ function CartPopoverItemPanel(props) {
           </div>
 
           <div className="popover-total-section">
-            <h5 className="popover-item-total">${props.price}</h5>
+            <h5 className="popover-item-total">${props.price.toFixed(2)}</h5>
           </div>
         </div>
       </div>

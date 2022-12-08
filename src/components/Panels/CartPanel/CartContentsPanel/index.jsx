@@ -132,7 +132,7 @@ function CartContentsPanel(props) {
                 </div>
               </div>
               <div className="price-section">
-                <h5 className="item-price">${props.price}</h5>
+                <h5 className="item-price">${props.price.toFixed(2)}</h5>
               </div>
               <div className="total-section">
                 <h5 className="item-total">${item_total.toFixed(2)}</h5>
