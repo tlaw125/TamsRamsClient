@@ -4,9 +4,8 @@
     margin: auto;
 }
 
-.feedback-title-frame{
+.feedback-title-frame {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0px 0px 16px 0px;
 }
@@ -16,44 +15,102 @@
     align-items: center;
 }
 
-.feedback-title-and-see-all-frame{
+.feedback-title-and-see-all-frame {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.feedback-star{
+.feedback-star {
     color: #218BC6;
 }
 
-.feedback-review-frame{
+.feedback-review-frame {
     display: flex;
     justify-content: center;
     padding: 0px 8px;
 }
 
-.review_loader{
-    width: 100%;
-    display: flex; 
+.write-review-and-pagination {
+    display: flex;
     justify-content: center;
-    padding-top: 24px;
+    align-items: center;
+}
+
+.write-review-frame {
+    padding: 0 12px;
+}
+
+.no-reviews-frame {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.write-review-icon {
+    margin-right: 8px;
+}
+
+.write-review-button {
+    color: black !important;
 }
 
 @media screen and (min-width: 995px) {
-    .feedback-div{
+    .feedback-div {
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
+
+    .feedback-title-frame {
+        justify-content: space-between;
+    }
 }
 
-  @media screen and (min-width: 0px) and (max-width: 995px) {
-    .feedback-div{
+@media screen and (min-width: 560px) and (max-width: 995px) {
+    .feedback-div {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
 
+    .feedback-title-frame {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 560px) {
+    .feedback-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .feedback-title-frame {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .feedback-title-and-see-all-frame {
+        flex-direction: column;
+    }
+
+    .write-review-and-pagination {
+        flex-direction: column;
+    }
+    
+    .write-review-frame {
+        padding: 12px;
+    }
 
 }

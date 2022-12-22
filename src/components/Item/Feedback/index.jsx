@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Review from './Review';
 import SeeAllReviewsModal from './See All Modal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight, faStar } from "@fortawesome/free-solid-svg-icons";
-import { useParams } from 'react-router-dom';
-import { Animation, Loader } from "rsuite";
+import { faAngleLeft, faAngleRight, faStar, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { useParams, Link } from 'react-router-dom';
+import { Animation, Button } from "rsuite";
 import Axios from 'axios';
 import Delayed from '../../Delayed';
 import "./index.css";
@@ -89,8 +89,7 @@ function Feedback(props) {
     const FeedbackInstance = () => {
         return (
             <div className="feedback">
-                {isLoading && <div className="review_loader"><Loader size="md" /></div>}
-                {!isLoading && reviewList.length > 0 && (<>
+                {reviewList.length > 0 && (<>
                     <div className="feedback-title-frame">
                         <div className='feedback-title-and-see-all-frame'>
                             <div className="feedback-title">
@@ -99,9 +98,16 @@ function Feedback(props) {
                             </div>
                             <SeeAllReviewsModal />
                         </div>
-                        <div className="feedback-pagination">
-                            <FontAwesomeIcon icon={faAngleLeft} size="lg" onClick={prevReview} /> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <FontAwesomeIcon icon={faAngleRight} size="lg" onClick={nextReview} />
+                        <div className="write-review-and-pagination">
+                            <div className="write-review-frame"><Link to={`/create-review/${id}/${product_name}`}><Button appearance="default" className="write-review-button">
+                                <div className="review-button-icon">
+                                    <FontAwesomeIcon icon={faPenToSquare} size="lg" className="write-review-icon" />
+                                    <p>Write a Review</p>
+                                </div></Button></Link></div>
+                            <div className="feedback-pagination">
+                                <FontAwesomeIcon icon={faAngleLeft} size="lg" onClick={prevReview} /> &nbsp;&nbsp;&nbsp;&nbsp;
+                                <FontAwesomeIcon icon={faAngleRight} size="lg" onClick={nextReview} />
+                            </div>
                         </div>
                     </div>
                     <Animation.Slide in={true} placement={placement}>
@@ -116,7 +122,14 @@ function Feedback(props) {
                         </div>
                     </Animation.Slide>
                 </>)}
-                {reviewList.length < 1 && (<>{errMessage}</>)}
+                {reviewList.length < 1 && (<div className="no-reviews-frame">
+                    {errMessage}
+                    <Link to={`/create-review/${id}/${product_name}`}><Button appearance="default" className="write-review-button">
+                        <div className="review-button-icon">
+                            <FontAwesomeIcon icon={faPenToSquare} size="lg" className="write-review-icon" />
+                            <p>Write a Review</p>
+                        </div></Button></Link>
+                </div>)}
 
             </div>
         );
