@@ -14,6 +14,7 @@ import ShippingPage from "../../pages/Shipping";
 import OrderConfirmationPage from "../../pages/OrderConfirmation";
 import PrivacyPolicy from "../../pages/PrivacyPolicy";
 import TermsConditions from "../../pages/TermsConditions";
+import CreateReview from "../../pages/CreateReview";
 import Footer from "../Footer";
 import '../../themes/findfins.less';
 import "./App.css";
@@ -37,6 +38,7 @@ function App() {
         <Route path="/order-confirmed" element={<OrderConfirmationPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
+        <Route path="/create-review/:id/:product_name" element={<CreateReview />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <div className="app_footer"><Footer /></div>
