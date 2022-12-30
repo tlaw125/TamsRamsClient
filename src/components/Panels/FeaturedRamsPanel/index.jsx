@@ -15,7 +15,7 @@ function FeaturedRamsPanel() {
           <Row>
             <Col xs={24} sm={24} md={8} lg={8} className="blackram">
               <ProductCard imagePath="images/black_storm_ram1.jpg"
-                name="Black Ram" price="34.99" productPath="/product/10/black-storm-ram" />
+                name="Black Storm Ram" price="34.99" productPath="/product/10/black-storm-ram" />
             </Col>
             <Col xs={24} sm={12} md={8}>
               <ProductCard imagePath="images/veiltail_electric_blue_ram1.jpg"
