@@ -215,7 +215,7 @@ function ShippingPage() {
 
         shipOptions.push(
             <label key="usps_priority_shipping" className="shipping-options-radio-select">
-                <div><input type="radio" checked={serviceName === "USPS Priority Flat Rate"} service_name="USPS Priority Flat Rate" service_code="usps_priority_option" value={11.50} name={`usps_priority`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
+                <div><input type="radio" checked={serviceName === "USPS Priority Flat Rate"} service_name="USPS Priority Flat Rate" service_code="usps_priority_option" value={usps_price} name={`usps_priority`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
                     USPS Priority Flat Rate</div>
                 <div>${usps_price}.00</div>
             </label>);
