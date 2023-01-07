@@ -50,7 +50,8 @@ function ShippingDoaPolicy() {
                                 <b className="shipping-doa-bold">UPS Ground:</b> Only available for customers in California. Packages are
                                 usually delivered within 2 days.
                                 <br /><br />
-                                <b className="shipping-doa-bold">USPS Priority:</b> For now, this shipping option is reserved for orders that contain only plants. It can take as fast as 2 days or as slow as 4 days to deliver (depending on delays). It's usually the cheapest
+                                <b className="shipping-doa-bold">USPS Priority:</b> A more budget-friendly option for those closer to the East Coast. 
+                                It can take as fast as 2 days or as slow as 4 days to deliver (depending on delays). It's usually the cheapest
                                 option available, and should be considered only if weather conditions look good. <br /><br />
                                 Shipping rates are calculated by the distance in which the package must travel, as well as the weight/size of the package.
                                 We are located in San Francisco, CA so the further you are from there, the greater the cost of shipping.
