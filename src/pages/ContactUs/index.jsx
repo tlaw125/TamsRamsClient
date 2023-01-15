@@ -78,7 +78,7 @@ function ContactUs() {
                         check our <a href="/FAQ">FAQ page</a> to see if your answer can be found there before
                         sending your message. Thanks!</p>
                     <div className="contact-us-form-frame">
-                        <form className="contact-us-form" onClick={(e) => handleSubmit(e)}>
+                        <form className="contact-us-form" onSubmit={(e) => handleSubmit(e)}>
                             <Row className="input-1-col">
                                 <Input className="contact-us-input" name="reply_to" type="email" placeholder="Email Address" />
                             </Row>
