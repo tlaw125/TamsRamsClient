@@ -41,7 +41,6 @@ function ContactUs() {
                 .then((response) => {
                     Alert.success('Your message was successfully sent!', 0);
                     console.log('SUCCESS!', response.status, response.text);
-                    response.send(200);
                 })
                 .catch((err) => {
                     Alert.error('Error: Something went wrong. Please try again or email us directly at shop.tamsrams@gmail.com', 0)
