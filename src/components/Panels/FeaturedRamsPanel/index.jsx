@@ -14,16 +14,16 @@ function FeaturedRamsPanel() {
         <Grid fluid>
           <Row>
             <Col xs={24} sm={24} md={8} lg={8} className="blackram">
-              <ProductCard imagePath="images/celestial_light_ram1.jpg"
+              <ProductCard imagePath="images/black_ram1.jpg"
+                name="Black Ram" price="24.99" productPath="/product/1/black-ram" />
+            </Col>
+            <Col xs={24} sm={12} md={8}>
+              <ProductCard imagePath="images/moon_dragon_ram1.jpg"
+                name="Moon Dragon Ram" price="34.99" productPath="/product/19/moon-dragon-ram" />
+            </Col>
+            <Col xs={24} sm={12} md={8}>
+            <ProductCard imagePath="images/celestial_light_ram1.jpg"
                 name="Celestial Light Ram" price="19.99" productPath="/product/20/celestial-light-ram" />
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-              <ProductCard imagePath="images/veiltail_electric_blue_ram1.jpg"
-                name="Veiltail Electric Blue Ram" price="24.99" productPath="/product/3/veiltail-electric-blue-ram" />
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-              <ProductCard imagePath="images/gold_electric_ram1.jpg"
-                name="Gold Electric Ram" price="14.99" productPath="/product/24/gold-electric-ram" />
             </Col>
           </Row>
         </Grid>
