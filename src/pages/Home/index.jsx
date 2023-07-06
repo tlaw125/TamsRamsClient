@@ -27,7 +27,7 @@ function Home() {
       <ShopLiveFishPanel />
       <FeaturedRamsYouPanel />
       <ExploreOtherSpeciesPanel />
-      <img src={"../../../public/images/wavey_line_divider.png"} className="wavey-divider-img"></img>
+      <img src={"images/wavey_line_divider.png"} className="wavey-divider-img"></img>
       <FeaturedReviewsPanel />
       <FollowUsPanel />
     </div>
