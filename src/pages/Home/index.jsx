@@ -2,7 +2,7 @@ import React from "react";
 import ShopLiveFishPanel from "../../components/Panels/ShopLiveFishPanel";
 import FeaturedRamsYouPanel from '../../components/Panels/FeaturedRamsPanel';
 import ExploreOtherSpeciesPanel from '../../components/Panels/ExploreOtherSpeciesPanel'
-import FeaturedReview from "../../components/Panels/FeaturedReviewsPanel/FeaturedReview";
+import FeaturedReviewsPanel from "../../components/Panels/FeaturedReviewsPanel";
 import FollowUsPanel from '../../components/Panels/FollowUsPanel'
 import { Helmet } from "react-helmet-async";
 
