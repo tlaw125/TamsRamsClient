@@ -7,7 +7,7 @@ function FeaturedReviewsPanel() {
   const FeaturedReviewsPanelInstance = ({ ...props }) => {
     return (
       <div className="featured_reviews_panel_container" >
-        <div className="title">
+        <div className="featured_reviews_title">
           <h2>Customer Testimonials</h2>
         </div>
           <div className="featured_reviews_container">
