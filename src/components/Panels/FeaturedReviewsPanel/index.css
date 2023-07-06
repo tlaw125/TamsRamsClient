@@ -19,6 +19,6 @@
 
 @media screen and (min-width: 1280px) {
     .featured_reviews_panel_container {
-        padding: 0 8%;
+        padding: 0 8% 64px 8%;
     }
 }
