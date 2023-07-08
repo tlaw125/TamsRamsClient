@@ -7,7 +7,7 @@ function FeaturedReviewsPanel() {
   const FeaturedReviewsPanelInstance = ({ ...props }) => {
     return (
       <div>
-        <img src={"../../../public/images/wavey_line_divider.png"} className="wavey-divider-img"></img>
+        <img src={"images/wavey_line_divider.png"} className="wavey-divider-img"></img>
         <div className="featured_reviews_panel_container" >
           <div className="featured_reviews_title">
             <h2>Customer Testimonials</h2>
