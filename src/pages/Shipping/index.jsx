@@ -241,7 +241,7 @@ function ShippingPage() {
                 <Input componentClass="textarea" rows={5} name="order_request" className="order-request-text-box"
                     placeholder="Any requests you'd like to make regarding your order? Please note, we cannot guarantee every request. (255 character limit)" />
                 <ButtonToolbar className="continue-to-payment-button">
-                    <Button appearance="primary" type="submit">Continue to Payment</Button>
+                    <Button appearance="primary" type="submit" disabled={!shippingSelected}>Continue to Payment</Button>
                 </ButtonToolbar>
             </form>)
     }
