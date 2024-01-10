@@ -21,7 +21,7 @@ function Feedback(props) {
 
     useEffect(() => {
         let isMounted = true;
-        Axios.get("https://tams-rams.herokuapp.com/api/get-reviews", {
+        Axios.get("https://tamsramsdb.onrender.com/api/get-reviews", {
             params:
             {
                 productID: id,

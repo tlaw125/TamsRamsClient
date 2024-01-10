@@ -96,7 +96,7 @@ function ShoppingCartPanel() {
         // console.log(cartList);
         let tempCart = [];
         for (const [key, value] of Object.entries(cart)) {
-            Axios.get("https://tams-rams.herokuapp.com/api/cart-info", {
+            Axios.get("https://tamsramsdb.onrender.com/api/cart-info", {
                 params:
                 {
                     id: key

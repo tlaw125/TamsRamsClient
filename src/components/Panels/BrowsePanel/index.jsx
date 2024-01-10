@@ -23,7 +23,7 @@ function Browse() {
 
     useEffect(() => {
         let isMounted = true;
-        Axios.get("https://tams-rams.herokuapp.com/api/browse-info", {
+        Axios.get("https://tamsramsdb.onrender.com/api/browse-info", {
             params:
             {
                 category: category,

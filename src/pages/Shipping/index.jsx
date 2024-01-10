@@ -102,7 +102,7 @@ function ShippingPage() {
         }
         else {
             setFieldEmpty(false);
-            Axios.get("https://tams-rams.herokuapp.com/api/validate-shipping-address", {
+            Axios.get("https://tamsramsdb.onrender.com/api/validate-shipping-address", {
                 params:
                 {
                     address1: event.target.address1.value,
@@ -127,7 +127,7 @@ function ShippingPage() {
                     setValidated(true);
                     // console.log("info: " + validated_address.AddressValidateResponse.Address.City, validated_address.AddressValidateResponse.Address.State, validated_address.AddressValidateResponse.Address.Zip5);
                     // console.log("box dimensions: " + box_length + box_width + box_height + box_weight);
-                    Axios.get("https://tams-rams.herokuapp.com/api/get-shipping-rates", {
+                    Axios.get("https://tamsramsdb.onrender.com/api/get-shipping-rates", {
                         params:
                         {
                             // address1: address1,
@@ -248,7 +248,7 @@ function ShippingPage() {
 
     const handleContinueToPayment = (e) => {
         e.preventDefault();
-        fetch("https://tams-rams.herokuapp.com/create-checkout-session", {
+        fetch("https://tamsramsdb.onrender.com/create-checkout-session", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

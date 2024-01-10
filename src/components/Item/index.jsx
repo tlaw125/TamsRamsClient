@@ -26,7 +26,7 @@ function Item() {
 
     useEffect(() => {
         let isMounted = true;
-        Axios.get("https://tams-rams.herokuapp.com/api/product-info", {
+        Axios.get("https://tamsramsdb.onrender.com/api/product-info", {
             params:
             {
                 productID: id,
