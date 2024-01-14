@@ -219,13 +219,14 @@ function ShippingPage() {
                     USPS Priority Flat Rate</div>
                 <div>${usps_price}.00</div>
             </label>);
-
-        // shipOptions.push(
-        //     <label key="free_shipping" className="shipping-options-radio-select">
-        //         <div><input type="radio" checked={serviceName === "Free Shipping"} service_name="Free Shipping" service_code="free_option" value={0} name={`free_shipping`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
-        //             Free Shipping</div>
-        //         <div>$0</div>
-        //     </label>);
+        if (box_size == "plants_only") {
+        shipOptions.push(
+            <label key="free_shipping" className="shipping-options-radio-select">
+                <div><input type="radio" checked={serviceName === "Free Shipping"} service_name="Free Shipping" service_code="free_option" value={0} name={`free_shipping`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
+                    Free Shipping</div>
+                <div>$0</div>
+            </label>);
+        }
 
         if (box_size == "plants_only") {
             shipOptions.push(
