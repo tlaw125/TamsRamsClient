@@ -14,7 +14,7 @@ function Form(props) {
 
     useEffect(() => {
         let isMounted = true;
-        Axios.get("https://tams-rams.herokuapp.com/api/product-variations", {
+        Axios.get("https://tamsramsdb.onrender.com/api/product-variations", {
             params:
             {
                 productID: id

@@ -33,7 +33,7 @@ function CreateReview() {
             // name: ${reviewName}
             // review: ${reviewText}
             // date: ${currentDate}`);
-            Axios.post("https://tams-rams.herokuapp.com/api/create-review", {
+            Axios.post("https://tamsramsdb.onrender.com/api/create-review", {
                 productID: id,
                 productName: productName,
                 customerEmail: reviewEmail,

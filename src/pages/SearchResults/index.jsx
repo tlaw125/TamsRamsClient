@@ -25,7 +25,7 @@ function SearchResultsPage() {
 
     useEffect(() => {
         let isMounted = true;
-        Axios.get("https://tams-rams.herokuapp.com/api/get-search-results", {
+        Axios.get("https://tamsramsdb.onrender.com/api/get-search-results", {
             params:
             {
                 searchQuery: searchQueryFormatted
