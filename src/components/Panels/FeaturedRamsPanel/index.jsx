@@ -18,8 +18,8 @@ function FeaturedRamsPanel() {
                 name="Black Ram" price="24.99" productPath="/product/1/black-ram" />
             </Col>
             <Col xs={24} sm={12} md={8}>
-              <ProductCard imagePath="images/moon_dragon_ram1.jpg"
-                name="Moon Dragon Ram" price="34.99" productPath="/product/19/moon-dragon-ram" />
+              <ProductCard imagePath="images/celestial_dark_ram1.jpg"
+                name="Celestial Dark Ram" price="24.99" productPath="/product/21/celestial-dark-ram" />
             </Col>
             <Col xs={24} sm={12} md={8}>
             <ProductCard imagePath="images/celestial_light_ram1.jpg"
