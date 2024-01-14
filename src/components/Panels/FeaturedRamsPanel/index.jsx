@@ -23,7 +23,7 @@ function FeaturedRamsPanel() {
             </Col>
             <Col xs={24} sm={12} md={8}>
             <ProductCard imagePath="images/celestial_light_ram1.jpg"
-                name="Celestial Light Ram" price="19.99" productPath="/product/20/celestial-light-ram" />
+                name="Celestial Light Ram" price="14.99" productPath="/product/20/celestial-light-ram" />
             </Col>
           </Row>
         </Grid>
