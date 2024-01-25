@@ -31,20 +31,20 @@ function ShippingPage() {
     let cart = location.state.cart, shipOptions = [];
     let box_size = location.state.boxSize, box_length = 0,
         box_width = 0, box_height = 0, box_weight = 0, box_dimensions = "";
-    let usps_price = 22;
+    let usps_price = 23;
 
     // console.log(location.state.subtotal);
     // console.log("Box Size: " + box_size);
     // console.log("Cart: " + cart);
 
     if (box_size == "small" || box_size == "plants_only") {
-        box_length = 8; box_width = 8; box_height = 8, box_weight = 3, usps_price = 22;
+        box_length = 8; box_width = 8; box_height = 8, box_weight = 3, usps_price = 23;
     }
     else if (box_size == "medium") {
-        box_length = 10; box_width = 10; box_height = 8, box_weight = 5, usps_price = 29;
+        box_length = 10; box_width = 10; box_height = 8, box_weight = 5, usps_price = 30;
     }
     else if (box_size == "large") {
-        box_length = 12; box_width = 10; box_height = 8, box_weight = 6, usps_price = 33;
+        box_length = 12; box_width = 10; box_height = 8, box_weight = 6, usps_price = 34;
     }
     box_dimensions = box_length + "x" + box_width + "x" + box_height;
 
