@@ -38,14 +38,17 @@ function NavBar() {
       <>
         {/* If the screen is > minWidth, put navbar at top */}
         {!mobile &&
-          <TopNav />
+          <><TopNav />
+            <div className="infoMessage">
+              <p>No shipping on the week of May 27th. Happy Memorial Day!</p>
+            </div></>
         }
 
         {/* If the screen is < minWidth, put navbar on the side 
         and add menu button to toggle it */}
         {mobile && (
 
-          <div className="top-navbar">
+          <><div className="top-navbar">
             <div className='menu-button'>
               <Button className="nav-button" appearance="subtle" onClick={() => setSidebar(!sidebar)}>
                 <Icon icon='bars' size="lg"
@@ -63,6 +66,9 @@ function NavBar() {
               <CartBadge />
             </Nav>
           </div>
+            <div className="infoMessage">
+              <p>No shipping on the week of May 27th. Happy Memorial Day!</p>
+            </div></>
         )}
 
         {mobile && sidebar && (<div className={sidebar ? "sidebar active" : "sidebar"}>

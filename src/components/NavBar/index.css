@@ -1,37 +1,49 @@
-
 .top-navbar {
     padding: 4px 0px;
     top: 0;
     width: 100%;
     z-index: 999;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     position: sticky;
-    background:rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 1);
 }
 
-.mobile-logo-container{
+.infoMessage {
+    padding: 8px;
+    z-index: 997;
+    top: 96px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #218BC6;
+    font-size: 16px;
+    color: white;
+}
+
+.mobile-logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 250ms;
 }
 
-.mobile-logo-img{
+.mobile-logo-img {
     width: 80px;
     height: 80px;
     padding: 8px;
 }
 
-.menu-button{
+.menu-button {
     padding-left: 8px;
 }
-    
+
 .cart-button {
     padding-right: 2%;
 }
-    
+
 
 .mobile-tams-rams {
     color: white;
@@ -45,7 +57,8 @@
     color: white !important;
 }
 
-.nav-button:hover, .nav-button:focus  {
+.nav-button:hover,
+.nav-button:focus {
     color: black !important;
 }
 
@@ -59,31 +72,46 @@
     overflow: auto;
 }
 
-.rs-badge-content{
+.rs-badge-content {
     background: #218BC6 !important;
 }
 
 
 
 @media screen and (min-width: 480px) {
-    .mobile-shopping-cart-popover{
+    .mobile-shopping-cart-popover {
         width: 400px;
-   }
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+    .mobile-shopping-cart-popover {
+        width: 400px;
+    }
+
+    .infoMessage {
+        top: 88px;
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 480px) {
-    .mobile-shopping-cart-popover{
+    .mobile-shopping-cart-popover {
         width: 100%;
-   }
+    }
 
-   .mobile-logo-img{
-    width: 48px;
-    height: 48px;
-    padding: 4px;
-}
+    .mobile-logo-img {
+        width: 48px;
+        height: 48px;
+        padding: 4px;
+    }
 
-   .mobile-tams-rams-title {
-    font-size: 28px;
+    .mobile-tams-rams-title {
+        font-size: 28px;
+    }
+
+    .infoMessage {
+        top: 70px;
+        font-size: 12px;
+    }
 }
-}
-   
