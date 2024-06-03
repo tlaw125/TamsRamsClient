@@ -39,9 +39,10 @@ function NavBar() {
         {/* If the screen is > minWidth, put navbar at top */}
         {!mobile &&
           <><TopNav />
-            <div className="infoMessage">
+            {/* <div className="infoMessage">
               <p>No shipping on the week of May 27th. Happy Memorial Day!</p>
-            </div></>
+            </div> */}
+            </>
         }
 
         {/* If the screen is < minWidth, put navbar on the side 
