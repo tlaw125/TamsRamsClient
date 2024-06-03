@@ -66,9 +66,10 @@ function NavBar() {
               <CartBadge />
             </Nav>
           </div>
-            <div className="infoMessage">
+            {/* <div className="infoMessage">
               <p>No shipping on the week of May 27th. Happy Memorial Day!</p>
-            </div></>
+            </div> */}
+            </>
         )}
 
         {mobile && sidebar && (<div className={sidebar ? "sidebar active" : "sidebar"}>

@@ -10,7 +10,7 @@
     background: rgba(0, 0, 0, 1);
 }
 
-.infoMessage {
+/* .infoMessage {
     padding: 8px;
     z-index: 997;
     top: 96px;
@@ -21,7 +21,7 @@
     background: #218BC6;
     font-size: 16px;
     color: white;
-}
+} */
 
 .mobile-logo-container {
     display: flex;
@@ -88,11 +88,11 @@
     .mobile-shopping-cart-popover {
         width: 400px;
     }
-
+/* 
     .infoMessage {
         top: 88px;
         font-size: 16px;
-    }
+    } */
 }
 
 @media screen and (min-width: 0px) and (max-width: 480px) {
@@ -110,8 +110,8 @@
         font-size: 28px;
     }
 
-    .infoMessage {
+    /* .infoMessage {
         top: 70px;
         font-size: 12px;
-    }
+    } */
 }
