@@ -67,9 +67,9 @@ function NavBar() {
               <CartBadge />
             </Nav>
           </div>
-            {/* <div className="infoMessage">
-              <p>No shipping on the week of May 27th. Happy Memorial Day!</p>
-            </div> */}
+            <div className="infoMessage">
+              <p>No shipping on the week of September 2nd. Happy Labor Day!</p>
+            </div>
             </>
         )}
 
