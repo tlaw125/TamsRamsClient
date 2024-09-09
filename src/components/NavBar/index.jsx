@@ -39,9 +39,9 @@ function NavBar() {
         {/* If the screen is > minWidth, put navbar at top */}
         {!mobile &&
           <><TopNav />
-            <div className="infoMessage">
+            {/* <div className="infoMessage">
               <p>No shipping on the week of September 2nd. Happy Labor Day!</p>
-            </div>
+            </div> */}
             </>
         }
 
@@ -67,9 +67,9 @@ function NavBar() {
               <CartBadge />
             </Nav>
           </div>
-            <div className="infoMessage">
+            {/* <div className="infoMessage">
               <p>No shipping on the week of September 2nd. Happy Labor Day!</p>
-            </div>
+            </div> */}
             </>
         )}
 
