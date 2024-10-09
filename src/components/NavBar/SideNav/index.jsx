@@ -38,6 +38,7 @@ function SideNav() {
             <Dropdown eventKey="1" title="Fish" icon={<FontAwesomeIcon icon={faFish} className="fa-icon" />}>
               <Dropdown.Item eventKey="1-1-1" href="/browse/fish/all?sortby=product_name&orderby=asc">All Fish</Dropdown.Item>
               <Dropdown.Item eventKey="1-1-2" href="/browse/fish/angelfish?sortby=product_name&orderby=asc">Angelfish</Dropdown.Item>
+              <Dropdown.Item eventKey="1-1-8" href="/browse/fish/goldfish?sortby=product_name&orderby=asc">Goldfish</Dropdown.Item>
               <Dropdown.Item eventKey="1-1-3" href="/browse/fish/livebearers?sortby=product_name&orderby=asc">Livebearers</Dropdown.Item>
               <Dropdown.Item eventKey="1-1-4" href="/browse/fish/plecos?sortby=product_name&orderby=asc">Plecos</Dropdown.Item>
               <Dropdown.Item eventKey="1-1-5" href="/browse/fish/rams?sortby=product_name&orderby=asc">Rams</Dropdown.Item>

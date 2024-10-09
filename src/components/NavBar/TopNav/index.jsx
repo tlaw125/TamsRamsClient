@@ -30,6 +30,7 @@ function TopNav() {
               <Dropdown.Menu title="Fish">
                 <Dropdown.Item href="/browse/fish/all?sortby=product_name&orderby=asc">All Fish</Dropdown.Item>
                 <Dropdown.Item href="/browse/fish/angelfish?sortby=product_name&orderby=asc">Angelfish</Dropdown.Item>
+                <Dropdown.Item href="/browse/fish/goldfish?sortby=product_name&orderby=asc">Goldfish</Dropdown.Item>
                 <Dropdown.Item href="/browse/fish/livebearers?sortby=product_name&orderby=asc">Livebearers</Dropdown.Item>
                 <Dropdown.Item href="/browse/fish/plecos?sortby=product_name&orderby=asc">Plecos</Dropdown.Item>
                 <Dropdown.Item href="/browse/fish/rams?sortby=product_name&orderby=asc">Rams</Dropdown.Item>
