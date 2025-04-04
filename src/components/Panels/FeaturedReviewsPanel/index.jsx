@@ -19,10 +19,12 @@ function FeaturedReviewsPanel() {
               the best breeder in the industry - Great Service and excellent quality fish!" />
             </div>
             <div className="featured_review">
-              <FeaturedReview name="Cesar Quiroga" rating={5} date="Jan 11, 2023"
-                text="Great quality Rams! They came packaged great and fish looked amazingly healthy!
-               Great quality all around especially customer service. Look forward to the continued 
-               service" />
+              <FeaturedReview name="Josiah" rating={5} date="Apr 4, 2025"
+                text="The guppies arrived without delay and were all alive. Tammy is really helpful with her 
+                customer service, so I would recommend anyone to order her fish from her...
+                Imagine the pictures for the fish, and when you get them, they look 10x better. Awesome fish 
+                and awesome service. I could write a whole book on how much I love these fish and how 
+                great the service was!!!!! " />
             </div>
             <div className="featured_review">
               <FeaturedReview name="Medaka Problem" rating={5} date="Jan 24, 2023"
