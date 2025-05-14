@@ -81,6 +81,105 @@ function ShippingPage() {
 
     // console.log("finalCart: " + JSON.stringify(finalCart));
 
+    const calculateShippingRates = (USstate)  => { 
+
+        const createShippingObject = (service_name, service_code, shipment_cost) => {
+            return {
+              serviceName: service_name,
+              serviceCode: service_code,
+              shipmentCost: shipment_cost,
+            };
+          };
+        let rates = [];
+        let cur_state = USstate;
+        console.log("state:" + state);
+          
+        if (cur_state == 'CA') {
+            // Within California
+            if (box_length == 8){
+                rates.push(createShippingObject('UPS Ground', 'ups_ground', 10.0),
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 15.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 20.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 15.0))
+            }
+            else if (box_length == 10){
+                rates.push(createShippingObject('UPS Ground', 'ups_ground', 11.0),
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 16.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 21.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 16.0))
+            }
+            else{
+                rates.push(createShippingObject('UPS Ground', 'ups_ground', 12.0),
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 17.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 22.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
+            }
+        } else if (zipcode.charAt(0) == '9') {
+             // Nearby states
+            if (box_length == 8){
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 18.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 35.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 15.0))
+            }
+            else if (box_length == 10){
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 20.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 38.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 16.0))
+            }
+            else{
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 17.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 40.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
+            }
+        } else if (zipcode.charAt(0) == '5' || zipcode.charAt(0) == '6' || zipcode.charAt(0) == '7' || zipcode.charAt(0) == '8') {
+             // Mid-distance
+            if (box_length == 8){
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 22.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 40.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
+            }
+            else if (box_length == 10){
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 26.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 45.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 20.0))
+            }
+            else{
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 30.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 50.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 27.0))
+            }
+        } else {
+            // Far states
+            if (box_length == 8){
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 23.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 58.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
+            }
+            else if (box_length == 10){
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 26.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 61.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 23.0))
+            }
+            else{
+                rates.push(
+                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 33.0),
+                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 65.0),
+                createShippingObject('USPS Priority Mail', 'usps_priority', 25.0))
+            }
+        }
+
+        // console.log(rates);
+        return rates;
+    };
+
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -127,30 +226,30 @@ function ShippingPage() {
                     setValidated(true);
                     // console.log("info: " + validated_address.AddressValidateResponse.Address.City, validated_address.AddressValidateResponse.Address.State, validated_address.AddressValidateResponse.Address.Zip5);
                     // console.log("box dimensions: " + box_length + box_width + box_height + box_weight);
-                    Axios.get("https://tamsramsdb.onrender.com/api/get-shipping-rates", {
-                        params:
-                        {
-                            // address1: address1,
-                            // address2: address2,
-                            city: validated_address.AddressValidateResponse.Address.City,
-                            state: validated_address.AddressValidateResponse.Address.State,
-                            zip_code: validated_address.AddressValidateResponse.Address.Zip5,
-                            box_length: box_length,
-                            box_width: box_width,
-                            box_height: box_height,
-                            box_weight: box_weight
-                            // city: city,
-                            // state: state,
-                            // zip_code: zipcode
-                        }
-                    }).then((response) => {
-                        // console.log(JSON.stringify(response.data));
-                        setShippingOptions(response.data);
-                        setLoading(false);
-                        // if (shippingOptions.length > 0) { setLoading(false); }
+                    // Axios.get("https://tamsramsdb.onrender.com/api/get-shipping-rates", {
+                    //     params:
+                    //     {
+                    //         // address1: address1,
+                    //         // address2: address2,
+                    //         city: validated_address.AddressValidateResponse.Address.City,
+                    //         state: validated_address.AddressValidateResponse.Address.State,
+                    //         zip_code: validated_address.AddressValidateResponse.Address.Zip5,
+                    //         box_length: box_length,
+                    //         box_width: box_width,
+                    //         box_height: box_height,
+                    //         box_weight: box_weight
+                    //         // city: city,
+                    //         // state: state,
+                    //         // zip_code: zipcode
+                    //     }
+                    // }).then((response) => {
+                    //     // console.log(JSON.stringify(response.data));
+                    //     setShippingOptions(response.data);
+                    //     setLoading(false);
+                    //     // if (shippingOptions.length > 0) { setLoading(false); }
 
-                    }
-                    )
+                    // }
+                    // )
                 }
             })
                 .catch((error => {
@@ -159,6 +258,13 @@ function ShippingPage() {
         }
 
     }
+
+    useEffect(() => {
+        if (state !== null && zipcode != null) {
+            setShippingOptions(calculateShippingRates(state));
+            setLoading(false);
+        }
+    }, [state, zipcode]);
 
 
     const handleValidatedChange = () => {
