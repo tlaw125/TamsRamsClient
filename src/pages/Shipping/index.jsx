@@ -81,98 +81,98 @@ function ShippingPage() {
 
     // console.log("finalCart: " + JSON.stringify(finalCart));
 
-    const calculateShippingRates = (USstate)  => { 
+    const calculateShippingRates = (USstate) => {
 
         const createShippingObject = (service_name, service_code, shipment_cost) => {
             return {
-              serviceName: service_name,
-              serviceCode: service_code,
-              shipmentCost: shipment_cost,
+                serviceName: service_name,
+                serviceCode: service_code,
+                shipmentCost: shipment_cost,
             };
-          };
+        };
         let rates = [];
         let cur_state = USstate;
         console.log("state:" + state);
-          
+
         if (cur_state == 'CA') {
             // Within California
-            if (box_length == 8){
+            if (box_length == 8) {
                 rates.push(createShippingObject('UPS Ground', 'ups_ground', 10.0),
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 15.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 44.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 16.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 15.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 44.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 16.0))
             }
-            else if (box_length == 10){
+            else if (box_length == 10) {
                 rates.push(createShippingObject('UPS Ground', 'ups_ground', 11.0),
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 16.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 46.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 20.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 16.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 46.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 20.0))
             }
-            else{
+            else {
                 rates.push(createShippingObject('UPS Ground', 'ups_ground', 12.0),
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 17.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 50.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 26.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 17.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 50.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 26.0))
             }
         } else if (zipcode.charAt(0) == '9') {
-             // Nearby states
-            if (box_length == 8){
+            // Nearby states
+            if (box_length == 8) {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 20.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 52.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 16.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 20.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 52.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 16.0))
             }
-            else if (box_length == 10){
+            else if (box_length == 10) {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 21.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 55.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 20.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 21.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 55.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 20.0))
             }
-            else{
+            else {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 25.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 59.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 26.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 25.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 59.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 26.0))
             }
         } else if (zipcode.charAt(0) == '5' || zipcode.charAt(0) == '6' || zipcode.charAt(0) == '7' || zipcode.charAt(0) == '8') {
-             // Mid-distance
-            if (box_length == 8){
+            // Mid-distance
+            if (box_length == 8) {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 22.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 58.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 22.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 58.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
             }
-            else if (box_length == 10){
+            else if (box_length == 10) {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 26.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 61.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 22.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 26.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 61.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 22.0))
             }
-            else{
+            else {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 32.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 65.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 27.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 32.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 65.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 27.0))
             }
         } else {
             // Far states
-            if (box_length == 8){
+            if (box_length == 8) {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 23.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 58.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 23.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 58.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 17.0))
             }
-            else if (box_length == 10){
+            else if (box_length == 10) {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 26.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 61.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 23.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 26.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 61.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 23.0))
             }
-            else{
+            else {
                 rates.push(
-                createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 33.0),
-                createShippingObject('UPS Next Day Air', 'ups_next_day_air', 65.0),
-                createShippingObject('USPS Priority Mail', 'usps_priority', 27.0))
+                    createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 33.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 65.0),
+                    createShippingObject('USPS Priority Mail', 'usps_priority', 27.0))
             }
         }
 
@@ -339,6 +339,13 @@ function ShippingPage() {
                     <div><input type="radio" checked={serviceName === "USPS Priority (PLANTS ONLY)"} service_name="USPS Priority (PLANTS ONLY)" service_code="plants_only_option" value={11.50} name={`shipping-option-plants-only`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
                         USPS Priority (PLANTS ONLY)</div>
                     <div>$11.50</div>
+                </label>);
+
+            shipOptions.push(
+                <label key="free_shipping" className="shipping-options-radio-select">
+                    <div><input type="radio" checked={serviceName === "Free Shipping"} service_name="Free Shipping" service_code="free_option" value={0} name={`free_shipping`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
+                        Free Shipping</div>
+                    <div>$0</div>
                 </label>);
         }
 
