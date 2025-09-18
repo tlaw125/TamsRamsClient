@@ -341,12 +341,6 @@ function ShippingPage() {
                     <div>$11.50</div>
                 </label>);
 
-            shipOptions.push(
-                <label key="free_shipping" className="shipping-options-radio-select">
-                    <div><input type="radio" checked={serviceName === "Free Shipping"} service_name="Free Shipping" service_code="free_option" value={0} name={`free_shipping`} className="shipping-options-radio-button" onChange={(e) => handleRadioChange(e)} />
-                        Free Shipping</div>
-                    <div>$0</div>
-                </label>);
         }
 
         shipOptions.push(
