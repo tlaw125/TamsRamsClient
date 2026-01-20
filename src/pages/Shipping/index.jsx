@@ -201,60 +201,61 @@ function ShippingPage() {
         }
         else {
             setFieldEmpty(false);
-            Axios.get("https://tamsramsdb.onrender.com/api/validate-shipping-address", {
-                params:
-                {
-                    address1: event.target.address1.value,
-                    address2: event.target.address2.value,
-                    city: event.target.city.value,
-                    state: event.target.state.value,
-                    zip_code: event.target.zip_code.value
-                }
-            }).then((response) => {
-                // console.log(JSON.stringify(response.data));
-                let validated_address = response.data;
-                if ("Error" in validated_address.AddressValidateResponse.Address) {
-                    // console.log("ERROR IN ADDRESS");
-                    setInvalid(true);
-                }
-                else {
-                    setAddress1(validated_address.AddressValidateResponse.Address.Address2);
-                    setAddress2(validated_address.AddressValidateResponse.Address.Address1);
-                    setCity(validated_address.AddressValidateResponse.Address.City);
-                    setState(validated_address.AddressValidateResponse.Address.State);
-                    setZipcode(validated_address.AddressValidateResponse.Address.Zip5);
-                    setValidated(true);
-                    // console.log("info: " + validated_address.AddressValidateResponse.Address.City, validated_address.AddressValidateResponse.Address.State, validated_address.AddressValidateResponse.Address.Zip5);
-                    // console.log("box dimensions: " + box_length + box_width + box_height + box_weight);
-                    // Axios.get("https://tamsramsdb.onrender.com/api/get-shipping-rates", {
-                    //     params:
-                    //     {
-                    //         // address1: address1,
-                    //         // address2: address2,
-                    //         city: validated_address.AddressValidateResponse.Address.City,
-                    //         state: validated_address.AddressValidateResponse.Address.State,
-                    //         zip_code: validated_address.AddressValidateResponse.Address.Zip5,
-                    //         box_length: box_length,
-                    //         box_width: box_width,
-                    //         box_height: box_height,
-                    //         box_weight: box_weight
-                    //         // city: city,
-                    //         // state: state,
-                    //         // zip_code: zipcode
-                    //     }
-                    // }).then((response) => {
-                    //     // console.log(JSON.stringify(response.data));
-                    //     setShippingOptions(response.data);
-                    //     setLoading(false);
-                    //     // if (shippingOptions.length > 0) { setLoading(false); }
+            setValidated(true);
+            // Axios.get("https://tamsramsdb.onrender.com/api/validate-shipping-address", {
+            //     params:
+            //     {
+            //         address1: event.target.address1.value,
+            //         address2: event.target.address2.value,
+            //         city: event.target.city.value,
+            //         state: event.target.state.value,
+            //         zip_code: event.target.zip_code.value
+            //     }
+            // }).then((response) => {
+            //     // console.log(JSON.stringify(response.data));
+            //     let validated_address = response.data;
+            //     if ("Error" in validated_address.AddressValidateResponse.Address) {
+            //         // console.log("ERROR IN ADDRESS");
+            //         setInvalid(true);
+            //     }
+            //     else {
+            //         setAddress1(validated_address.AddressValidateResponse.Address.Address2);
+            //         setAddress2(validated_address.AddressValidateResponse.Address.Address1);
+            //         setCity(validated_address.AddressValidateResponse.Address.City);
+            //         setState(validated_address.AddressValidateResponse.Address.State);
+            //         setZipcode(validated_address.AddressValidateResponse.Address.Zip5);
+            //         setValidated(true);
+            //         // console.log("info: " + validated_address.AddressValidateResponse.Address.City, validated_address.AddressValidateResponse.Address.State, validated_address.AddressValidateResponse.Address.Zip5);
+            //         // console.log("box dimensions: " + box_length + box_width + box_height + box_weight);
+            //         // Axios.get("https://tamsramsdb.onrender.com/api/get-shipping-rates", {
+            //         //     params:
+            //         //     {
+            //         //         // address1: address1,
+            //         //         // address2: address2,
+            //         //         city: validated_address.AddressValidateResponse.Address.City,
+            //         //         state: validated_address.AddressValidateResponse.Address.State,
+            //         //         zip_code: validated_address.AddressValidateResponse.Address.Zip5,
+            //         //         box_length: box_length,
+            //         //         box_width: box_width,
+            //         //         box_height: box_height,
+            //         //         box_weight: box_weight
+            //         //         // city: city,
+            //         //         // state: state,
+            //         //         // zip_code: zipcode
+            //         //     }
+            //         // }).then((response) => {
+            //         //     // console.log(JSON.stringify(response.data));
+            //         //     setShippingOptions(response.data);
+            //         //     setLoading(false);
+            //         //     // if (shippingOptions.length > 0) { setLoading(false); }
 
-                    // }
-                    // )
-                }
-            })
-                .catch((error => {
-                    console.log(error);
-                }))
+            //         // }
+            //         // )
+            //     }
+            // })
+            //     .catch((error => {
+            //         console.log(error);
+            //     }))
         }
 
     }
@@ -402,7 +403,7 @@ function ShippingPage() {
         </Row>
         <Row className="val-ad-button-and-message-frame">
             <ButtonToolbar>
-                <Button appearance="primary" type="submit" >Validate Address</Button>
+                <Button appearance="primary" type="submit" >Get Shipping Rates</Button>
                 <Whisper speaker={<Tooltip>Checks if address is valid and converts it into proper formatting if needed. </Tooltip>}>
                     <Icon icon="help-o" />
                 </Whisper>
@@ -439,12 +440,12 @@ function ShippingPage() {
                 <div className="state-picker"><StatePicker name="state" defaultValue={state} onChange={() => handleValidatedChange()} /></div>
                 <Input placeholder="ZIP Code" name="zip_code" className="address-input-2-col-2" value={zipcode} onChange={() => handleValidatedChange()} />
             </Row>
-            <Row className="val-ad-button-and-message-frame">
+            {/* <Row className="val-ad-button-and-message-frame">
                 <div className="validAddressFrame">
                     <Icon className="validAddressIcon" icon="check-circle" />
                     <p className="validAddressMessage">Address has been validated!</p>
                 </div>
-            </Row>
+            </Row> */}
             <Row className="val-ad-button-and-message-frame">
                 <div className="validAddressFrame">
                     <Icon className="checkAddressIcon" icon="info" />
