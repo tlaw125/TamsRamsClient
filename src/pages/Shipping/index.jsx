@@ -171,7 +171,7 @@ function ShippingPage() {
             else {
                 rates.push(
                     createShippingObject('UPS 2nd Day Air', 'ups_2nd_day_air', 40.0),
-                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 76.0),
+                    createShippingObject('UPS Next Day Air', 'ups_next_day_air', 79.0),
                     createShippingObject('USPS Priority Mail', 'usps_priority', 33.0))
             }
         }
